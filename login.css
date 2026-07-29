@@ -61,3 +61,11 @@ body{
   from{left:20px;}
   to{left:420px;}
 }
+setTimeout(function () {
+    document.getElementById("login").style.display = "block";
+}, 4000);
+
+function login() {
+    alert("Login Successful!");
+    window.location.href = "dashboard.html";
+}
