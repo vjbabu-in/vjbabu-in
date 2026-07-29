@@ -69,3 +69,37 @@ function login() {
     alert("Login Successful!");
     window.location.href = "dashboard.html";
 }
+.man{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    width:80px;
+    animation:walk 4s linear forwards,
+              bounce 0.5s infinite;
+}
+
+@keyframes walk{
+    0%{left:20px;}
+    100%{left:420px;}
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+.login{
+    opacity:0;
+    transform:scale(0.8);
+    transition:0.5s;
+}
+
+.login.show{
+    display:block;
+    opacity:1;
+    transform:scale(1);
+}
