@@ -27,3 +27,43 @@ function loginUser() {
 
   return false;
 }
+function togglePassword() {
+    let pass = document.getElementById("password");
+
+    if (pass.type === "password") {
+        pass.type = "text";
+    } else {
+        pass.type = "password";
+    }
+}
+
+window.onload = function () {
+    let savedUser = localStorage.getItem("username");
+
+    if (savedUser) {
+        document.getElementById("username").value = savedUser;
+        document.getElementById("remember").checked = true;
+    }
+};
+
+function loginUser() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "vijay" && password === "1234") {
+
+        if (document.getElementById("remember").checked) {
+            localStorage.setItem("username", username);
+        } else {
+            localStorage.removeItem("username");
+        }
+
+        alert("✅ Login Successful");
+        window.location.href = "dashboard.html";
+
+    } else {
+        alert("❌ Invalid Username or Password");
+    }
+
+    return false;
+}
