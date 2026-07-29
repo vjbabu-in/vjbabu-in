@@ -53,6 +53,14 @@
 <p>Help us create more free courses.</p>
 <a href="donate.html"><button>Donate</button></a>
 </div>
+  <button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+}
+</script>
   <div class="card">
   <h3>🏅 Achievements</h3>
 
