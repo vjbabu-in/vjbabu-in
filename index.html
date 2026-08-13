@@ -3,38 +3,1273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VjBabu.in</title>
 
 <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-   
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#f8fafc;
+}
+
+/* =========================
+   PORTFOLIO HOME
+========================= */
+
+#portfolio{
+    min-height:100vh;
+    padding:45px 20px;
+    text-align:center;
+}
+
+.logo{
+    font-size:55px;
+    font-weight:700;
+    margin:10px 0 25px;
+}
+
+.intro h2{
+    font-size:30px;
+    margin:10px 0;
+}
+
+.intro p{
+    font-size:20px;
+    color:#e2e8f0;
+    margin-bottom:30px;
+}
+
+.main-btn{
+    width:100%;
+    max-width:640px;
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    font-family:inherit;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    transform:translateY(-2px);
+    background:#1d4ed8;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:28px;
+    margin:25px auto;
+    max-width:620px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.card h2{
+    margin-top:0;
+}
+
+.services p{
+    font-size:18px;
+    margin:18px 0;
+}
+
+.hire{
+    margin-top:25px;
+}
+
+/* =========================
+   LEARNING WEBSITE
+========================= */
+
+#learningSite{
+    display:none;
+    padding:20px;
+    background:#0f172a;
+}
+
+.learning-header{
+    text-align:center;
+    padding:25px 10px;
+}
+
+.learning-header h1{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.learning-header p{
+    color:#cbd5e1;
+}
+
+.learning-nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin:20px auto;
+    max-width:1000px;
+}
+
+.learning-nav a{
+    text-decoration:none;
+}
+
+.learning-nav button{
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.learning-section{
+    max-width:1000px;
+    margin:25px auto;
+    background:#1e293b;
+    border-radius:18px;
+    padding:25px;
+}
+
+.learning-section h2{
+    margin-top:0;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero h2{
+    color:#38bdf8;
+}
+
+.hero p{
+    color:#cbd5e1;
+}
+
+.start-btn,
+.contact-btn,
+.action-btn{
+    border:none;
+    padding:13px 20px;
+    margin:8px;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.profile{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #2563eb;
+}
+
+.skill{
+    margin:18px 0;
+}
+
+.skill progress{
+    width:100%;
+    height:15px;
+}
+
+.notes{
+    background:#0f172a;
+    padding:20px;
+    border-radius:12px;
+}
+
+.review{
+    background:#0f172a;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+details{
+    background:#0f172a;
+    padding:15px;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:600;
+}
+
+input[type="text"],
+input[type="email"]{
+    width:100%;
+    max-width:500px;
+    padding:13px;
+    border:none;
+    border-radius:8px;
+    margin:8px 0;
+    font-family:inherit;
+}
+
+.project{
+    padding:18px;
+    background:#0f172a;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.project h3{
+    margin-bottom:5px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.stats .card{
+    margin:0;
+    text-align:center;
+}
+
+.slider{
+    max-width:700px;
+    margin:30px auto;
+}
+
+.slides{
+    width:100%;
+    border-radius:15px;
+    display:none;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#22c55e;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    z-index:1000;
+}
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:85px;
+    display:none;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#cbd5e1;
+}
+
+.back-btn{
+    margin-top:25px;
+    background:#334155;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    #portfolio{
+        padding:30px 15px;
+    }
+
+    .logo{
+        font-size:42px;
+    }
+
+    .intro h2{
+        font-size:25px;
+    }
+
+    .intro p{
+        font-size:17px;
+    }
+
+    .card{
+        padding:22px 18px;
+    }
+
+    .learning-section{
+        padding:20px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+}
+</style>
+
 </head>
 
 <body>
-  <header class="header">
-    <h1>🌐 VjBabu.in</h1>
-    <h2>Hi, I'm Vijay Kumar 👋</h2>
-    <p>Front-End Web Developer | BTech ECE Student</p>
 
-    <a href="#projects">
-        <button>💼 View Projects</button>
-    </a>
-     <section class="card" id="services">
-<h2>💼 My Services</h2>
+<!-- ==================================================
+     PORTFOLIO HOME
+================================================== -->
 
-<p>🌐 Business Website</p>
-<p>👨‍💻 Personal Portfolio Website</p>
-<p>🎨 Landing Page Design</p>
-<p>📱 Mobile Friendly Website</p>
+<section id="portfolio">
 
-     </section>
+    <div class="logo">
+        🌐 VjBabu.in
+    </div>
 
-    <a href="#9032219791">
-        <button>📞 Hire Me</button>
-    </a>
-  </header>
+    <div class="intro">
 
-<div id="content" style="display:none;">
+        <h2>
+            Hi, I'm Vijay Kumar 👋
+        </h2>
+
+        <p>
+            Front-End Web Developer | BTech ECE Student
+        </p>
+
+    </div>
+
+    <!-- VIEW PROJECTS -->
+
+    <button class="main-btn" onclick="openProjects()">
+        💼 View Projects
+    </button>
+
+
+    <!-- SERVICES -->
+
+    <div class="card services">
+
+        <h2>💼 My Services</h2>
+
+        <p>🌐 Business Website</p>
+
+        <p>👨‍💻 Personal Portfolio Website</p>
+
+        <p>🎨 Landing Page Design</p>
+
+        <p>📱 Mobile Friendly Website</p>
+
+    </div>
+
+
+    <!-- HIRE ME -->
+
+    <div class="hire">
+
+        <a href="tel:+919032219791">
+
+            <button class="main-btn">
+                📞 Hire Me
+            </button>
+
+        </a>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <div class="card">
+
+        <h2>👋 About Me</h2>
+
+        <p>
+            Hi, I'm Vijay Kumar.
+        </p>
+
+        <p>
+            I'm a BTech ECE Student and Front-End Web Developer from Andhra Pradesh.
+        </p>
+
+        <p>
+            I create modern, responsive websites using HTML, CSS and JavaScript.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     LEARN WITH VIJAY WEBSITE
+================================================== -->
+
+<section id="learningSite">
+
+    <header class="learning-header">
+
+        <h1>🌐 Learn With Vijay</h1>
+
+        <p>
+            Designed & Developed by
+            <a href="https://instagram.com/vij_ay_the_ro_y_al"
+               target="_blank"
+               style="color:#38bdf8;">
+                <b>Vijay Babu</b>
+            </a>
+            ❤️
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="learning-nav">
+
+        <a href="index.html">
+            <button>Home</button>
+        </a>
+
+        <a href="about.html">
+            <button>About</button>
+        </a>
+
+        <a href="courses.html">
+            <button>Courses</button>
+        </a>
+
+        <a href="contact.html">
+            <button>Contact</button>
+        </a>
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="register.html">
+            <button>Register</button>
+        </a>
+
+        <a href="dashboard.html">
+            <button>Dashboard</button>
+        </a>
+
+        <a href="profile.html">
+            <button>Profile</button>
+        </a>
+
+        <a href="quiz.html">
+            <button>📝 Quiz</button>
+        </a>
+
+        <a href="certificate.html">
+            <button>🎓 Certificate</button>
+        </a>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="learning-section hero">
+
+        <img
+            src="vijay.jpg"
+            alt="Vijay"
+            class="profile"
+        >
+
+        <h1>
+            Learn With Vijay
+        </h1>
+
+        <h2>
+            Learn Coding for Free
+        </h2>
+
+        <p>
+            HTML • CSS • JavaScript • Python • Java • C • C++ • AI • More
+        </p>
+
+        <a href="courses.html">
+            <button class="start-btn">
+                🚀 Start Learning
+            </button>
+        </a>
+
+        <a href="contact.html">
+            <button class="contact-btn">
+                📞 Contact Us
+            </button>
+        </a>
+
+        <button
+            class="action-btn"
+            onclick="shareWebsite()">
+            📤 Share Website
+        </button>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="learning-section">
+
+        <h2>👋 About Me</h2>
+
+        <p>
+            Hi, I'm Vijay Kumar.
+        </p>
+
+        <p>
+            I'm a BTech ECE Student and Front-End Web Developer from Andhra Pradesh.
+        </p>
+
+        <p>
+            I create modern, responsive websites using HTML, CSS and JavaScript.
+        </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="learning-section">
+
+        <h2>💻 My Skills</h2>
+
+        <div class="skill">
+
+            <p>HTML</p>
+
+            <progress
+                value="95"
+                max="100">
+            </progress>
+
+        </div>
+
+        <div class="skill">
+
+            <p>CSS</p>
+
+            <progress
+                value="90"
+                max="100">
+            </progress>
+
+        </div>
+
+        <div class="skill">
+
+            <p>JavaScript</p>
+
+            <progress
+                value="75"
+                max="100">
+            </progress>
+
+        </div>
+
+        <p>✅ GitHub</p>
+
+        <p>✅ Responsive Web Design</p>
+
+    </section>
+
+
+    <!-- COURSE NOTES -->
+
+    <section class="learning-section">
+
+        <h2>📄 Course Notes</h2>
+
+        <div class="notes">
+
+            <h3>HTML Introduction</h3>
+
+            <p>
+                HTML (HyperText Markup Language) is used to create web pages.
+            </p>
+
+            <h3>Basic Tags</h3>
+
+            <ul>
+                <li>&lt;html&gt;</li>
+                <li>&lt;head&gt;</li>
+                <li>&lt;body&gt;</li>
+                <li>&lt;h1&gt; to &lt;h6&gt;</li>
+                <li>&lt;p&gt;</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK QUIZ -->
+
+    <section class="learning-section">
+
+        <h2>📝 Quick Quiz</h2>
+
+        <p>
+            <b>1. HTML stands for?</b>
+        </p>
+
+        <label>
+            <input
+                type="radio"
+                name="q1"
+                value="a">
+            Hyper Text Markup Language
+        </label>
+
+        <br>
+
+        <label>
+            <input
+                type="radio"
+                name="q1"
+                value="b">
+            High Text Machine Language
+        </label>
+
+        <br><br>
+
+        <button
+            class="action-btn"
+            onclick="checkQuiz()">
+            Submit
+        </button>
+
+        <p id="quizResult"></p>
+
+    </section>
+
+
+    <!-- MY PROJECTS -->
+
+    <section class="learning-section">
+
+        <h2>📂 My Projects</h2>
+
+        <div class="project">
+
+            <h3>🌐 Learn With Vijay</h3>
+
+            <p>
+                Online Learning Website
+            </p>
+
+            <a href="courses.html">
+                <button class="action-btn">
+                    🚀 Open Website
+                </button>
+            </a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>📱 Mobile Shop Website</h3>
+
+            <p>
+                Responsive Business Website
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🍽 Restaurant Website</h3>
+
+            <p>
+                Modern Restaurant Landing Page
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="learning-section">
+
+        <h2>📞 Contact Me</h2>
+
+        <p>
+            📧 learnwithvijay@gmail.com
+        </p>
+
+        <p>
+            📱 WhatsApp: +91 9032219791
+        </p>
+
+        <a href="https://instagram.com/vij_ay_the_ro_y_al"
+           target="_blank">
+
+            <button class="action-btn">
+                Instagram
+            </button>
+
+        </a>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+
+    <section class="learning-section">
+
+        <h2>⭐ Student Reviews</h2>
+
+        <div class="review">
+
+            <h3>Rahul</h3>
+
+            <p>
+                "Excellent courses! Easy to understand."
+            </p>
+
+            ⭐⭐⭐⭐⭐
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>Priya</h3>
+
+            <p>
+                "The HTML and CSS courses helped me build my first website."
+            </p>
+
+            ⭐⭐⭐⭐⭐
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>Arjun</h3>
+
+            <p>
+                "Simple explanations and good practice examples."
+            </p>
+
+            ⭐⭐⭐⭐☆
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="learning-section">
+
+        <h2>❓ Frequently Asked Questions</h2>
+
+        <details>
+
+            <summary>
+                Are the courses free?
+            </summary>
+
+            <p>
+                Yes, many courses are available for free.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Will I get a certificate?
+            </summary>
+
+            <p>
+                Certificates are available for eligible completed courses.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I learn on my mobile?
+            </summary>
+
+            <p>
+                Yes, the website is designed to work on mobile devices.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How can I contact Learn With Vijay?
+            </summary>
+
+            <p>
+                Use the Contact page or email us.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="learning-section">
+
+        <h2>📩 Subscribe for Updates</h2>
+
+        <p>
+            Get updates about new courses and tutorials.
+        </p>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email">
+
+        <br>
+
+        <button
+            class="action-btn"
+            onclick="subscribe()">
+            Subscribe
+        </button>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- PROFILE / STATS -->
+
+    <section class="learning-section">
+
+        <div class="stats">
+
+            <div class="card">
+
+                <h2 id="students">
+                    1000+
+                </h2>
+
+                <p>
+                    Students
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2 id="coursesCount">
+                    25+
+                </h2>
+
+                <p>
+                    Courses
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2 id="visitors">
+                    10000+
+                </h2>
+
+                <p>
+                    Visitors
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESUME -->
+
+    <section class="learning-section">
+
+        <h2>📄 Resume</h2>
+
+        <a href="resume.pdf" download>
+
+            <button class="action-btn">
+                ⬇ Download Resume
+            </button>
+
+        </a>
+
+    </section>
+
+
+    <!-- FOLLOW -->
+
+    <section class="learning-section">
+
+        <h2>🌍 Follow Me</h2>
+
+        <a
+            href="https://instagram.com/vij_ay_the_ro_y_al"
+            target="_blank">
+
+            <button class="action-btn">
+                Instagram
+            </button>
+
+        </a>
+
+        <a
+            href="https://github.com/vjbabu-in"
+            target="_blank">
+
+            <button class="action-btn">
+                GitHub
+            </button>
+
+        </a>
+
+    </section>
+
+
+    <!-- SLIDER -->
+
+    <section class="learning-section">
+
+        <h2>🖼️ Gallery</h2>
+
+        <div class="slider">
+
+            <img
+                class="slides"
+                src="image1.jpg"
+                alt="Image 1">
+
+            <img
+                class="slides"
+                src="image2.jpg"
+                alt="Image 2">
+
+            <img
+                class="slides"
+                src="image3.jpg"
+                alt="Image 3">
+
+        </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <div style="text-align:center;">
+
+        <button
+            class="main-btn back-btn"
+            onclick="closeProjects()">
+
+            ⬅ Back to VjBabu.in
+
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Learn With Vijay
+        </h3>
+
+        <p>
+            Learn Skills • Build Your Future
+        </p>
+
+        <p>
+            © 2026 VjBabu.in
+        </p>
+
+        <p>
+            Designed & Developed by Vijay Babu ❤️
+        </p>
+
+        <p>
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</section>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/919032219791"
+    class="whatsapp"
+    target="_blank">
+
+    💬
+
+</a>
+
+
+<!-- TOP BUTTON -->
+
+<button
+    id="topBtn"
+    class="top-btn"
+    onclick="topFunction()">
+
+    ⬆ Top
+
+</button>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+/* VIEW PROJECTS */
+
+function openProjects(){
+
+    document.getElementById("portfolio").style.display = "none";
+
+    document.getElementById("learningSite").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* BACK TO PORTFOLIO */
+
+function closeProjects(){
+
+    document.getElementById("learningSite").style.display = "none";
+
+    document.getElementById("portfolio").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* SHARE */
+
+function shareWebsite(){
+
+    if(navigator.share){
+
+        navigator.share({
+
+            title:"Learn With Vijay",
+
+            text:"Learn coding for free!",
+
+            url:window.location.href
+
+        });
+
+    }else{
+
+        alert("Sharing is not supported on this device.");
+
+    }
+
+}
+
+
+/* QUIZ */
+
+function checkQuiz(){
+
+    let answer =
+        document.querySelector(
+            'input[name="q1"]:checked'
+        );
+
+    let result =
+        document.getElementById("quizResult");
+
+    if(answer && answer.value === "a"){
+
+        result.innerHTML =
+            "✅ Correct Answer!";
+
+    }else{
+
+        result.innerHTML =
+            "❌ Wrong Answer. Try Again!";
+
+    }
+
+}
+
+
+/* NEWSLETTER */
+
+function subscribe(){
+
+    let email =
+        document.getElementById("email").value;
+
+    let message =
+        document.getElementById("message");
+
+    if(email === ""){
+
+        message.innerHTML =
+            "❌ Please enter your email.";
+
+    }else{
+
+        message.innerHTML =
+            "✅ Thank you for subscribing!";
+
+    }
+
+}
+
+
+/* TOP BUTTON */
+
+let topBtn =
+    document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+    if(document.documentElement.scrollTop > 200){
+
+        topBtn.style.display = "block";
+
+    }else{
+
+        topBtn.style.display = "none";
+
+    }
+
+};
+
+
+function topFunction(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* IMAGE SLIDER */
+
+let slideIndex = 0;
+
+function showSlides(){
+
+    let slides =
+        document.getElementsByClassName("slides");
+
+    if(slides.length === 0){
+
+        return;
+
+    }
+
+    for(let i=0;i<slides.length;i++){
+
+        slides[i].style.display = "none";
+
+    }
+
+    slideIndex++;
+
+    if(slideIndex > slides.length){
+
+        slideIndex = 1;
+
+    }
+
+    slides[slideIndex-1].style.display = "block";
+
+    setTimeout(showSlides,3000);
+
+}
+
+showSlides();
+
+</script>
+
+
+</body>
+</html><div id="content" style="display:none;">
  
 <button onclick="searchPage()">Search</button>
 <header>
