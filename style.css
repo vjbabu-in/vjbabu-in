@@ -581,3 +581,23 @@ progress{
     width:100%;
     height:18px;
 }
+/* Text Visibility Fix */
+h1, h2, h3, h4, h5, h6 {
+    color: #111 !important;
+    opacity: 1 !important;
+}
+
+p, span, li {
+    color: #444 !important;
+    opacity: 1 !important;
+}
+
+/* Dark cards లో text */
+.card h1,
+.card h2,
+.card h3,
+.card p,
+.card li,
+.card span {
+    color: #fff !important;
+}
