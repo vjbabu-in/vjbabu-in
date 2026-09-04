@@ -1905,6 +1905,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".hidden").forEach((el) => {
     observer.observe(el);
 });
+function toggleTheme(){
+
+    document.body.classList.toggle("light-mode");
+
+}
      <script>
 function toggleTheme(){
   document.body.classList.toggle("light-mode");
