@@ -973,3 +973,23 @@ button,
         display:flex;
     }
 }
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+    gap:20px;
+}
+
+.stats div{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    min-width:150px;
+}
+
+.stats h3{
+    font-size:35px;
+    color:#38bdf8;
+    margin:0;
+}
