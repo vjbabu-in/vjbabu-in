@@ -765,3 +765,13 @@ button,
 }
 
 @media(max-width:768
+#skills p{
+    margin:15px 0 5px;
+    font-weight:600;
+}
+
+#skills progress{
+    width:100%;
+    height:18px;
+    border-radius:10px;
+}
