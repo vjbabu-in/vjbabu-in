@@ -1948,6 +1948,31 @@ function toggleTheme(){
 function toggleMenu(){
     document.getElementById("navbar").classList.toggle("show");
 }
+
+function animateCounter(id, target, speed){
+
+    let count = 0;
+
+    const element = document.getElementById(id);
+
+    const timer = setInterval(function(){
+
+        count++;
+
+        element.innerHTML = count + "+";
+
+        if(count >= target){
+            clearInterval(timer);
+        }
+
+    }, speed);
+
+}
+
+animateCounter("visitorCount", 5000, 1);
+animateCounter("projectCount", 15, 80);
+animateCounter("courseCount", 25, 50);
+
      <script>
 function toggleTheme(){
   document.body.classList.toggle("light-mode");
