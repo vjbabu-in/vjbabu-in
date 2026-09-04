@@ -817,3 +817,37 @@ button,
 #contact textarea:focus{
     outline:2px solid #38bdf8;
 }
+/* ===== FOOTER ===== */
+
+.footer{
+    background:#020617;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+.footer h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.footer p{
+    color:#cbd5e1;
+    margin:8px 0;
+}
+
+.social-links{
+    margin:20px 0;
+}
+
+.social-links a{
+    color:#38bdf8;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+}
+
+.social-links a:hover{
+    color:#ffffff;
+}
