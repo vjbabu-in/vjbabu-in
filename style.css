@@ -898,3 +898,31 @@ button,
     opacity:1;
     transform:translateY(0);
 }
+#themeBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    z-index:1000;
+}
+
+.light-mode{
+    background:#f8fafc;
+    color:#111827;
+}
+
+.light-mode .card,
+.light-mode .learning-section{
+    background:#ffffff;
+    color:#111827;
+}
+
+.light-mode .footer{
+    background:#e5e7eb;
+    color:#111827;
+}
