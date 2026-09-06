@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile - VjBabu.in</title>
+
+<title>Profile | Learn With Vijay</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<header>
-<h1>👤 My Profile</h1>
-</header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
-<a href="profile.html">Profile</a>
-<a href="courses.html">Courses</a>
-<a href="contact.html">Contact</a>
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+Learn With <span>Vijay</span>
+</div>
+
 </nav>
 
-<section>
+</header>
 
-<img src="vijay.jpg" alt="Profile Photo" width="150">
 
-<h2>Vijay Babu</h2>
 
-<p><strong>Username:</strong> @vijaybabu</p>
 
-<p><strong>Website:</strong> VjBabu.in</p>
 
-<p><strong>Role:</strong> Founder & Developer</p>
+<section class="course-hero">
 
-<button>Edit Profile</button>
+<h1>
+👤 Student Profile
+</h1>
+
+<p>
+Your learning details
+</p>
+
+
+<a href="dashboard.html">
+
+<button class="btn">
+⬅ Dashboard
+</button>
+
+</a>
+
 
 </section>
 
-<footer>
-<p>© 2026 VjBabu.in</p>
-<p>Designed & Developed by <b>Vijay Babu</b> ❤️</p>
-</footer>
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="course-card">
+
+
+<img src="IMG_20260901_151704.png"
+style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+
+
+
+<h2 id="studentName">
+Student Name
+</h2>
+
+
+
+<p>
+📧 Email:
+<span id="studentEmail"></span>
+</p>
+
+
+<p>
+🎓 Course:
+Web Development
+</p>
+
+
+<p>
+🏆 Certificates:
+1 Completed
+</p>
+
+
+<p>
+⭐ Learning Status:
+Active
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+document.getElementById("studentName").innerHTML =
+localStorage.getItem("name") || "Vijay Student";
+
+
+document.getElementById("studentEmail").innerHTML =
+localStorage.getItem("email") || "Not Available";
+
+
+</script>
+
+
+
 
 </body>
+
 </html>
