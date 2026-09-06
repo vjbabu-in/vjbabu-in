@@ -1,1667 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VjBabu.in</title>
+<title>VjBabu.in | Vijay Babu Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="login.css">
-<style>
-*{
-    box-sizing:border-box;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-html{
-    scroll-behavior:smooth;
-}
+</head>
 
-body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:#f8fafc;
-}
-
-/* =========================
-   PORTFOLIO HOME
-========================= */
-
-#portfolio{
-    min-height:100vh;
-    padding:45px 20px;
-    text-align:center;
-}
-
-.logo{
-    font-size:55px;
-    font-weight:700;
-    margin:10px 0 25px;
-}
-
-.intro h2{
-    font-size:30px;
-    margin:10px 0;
-}
-
-.intro p{
-    font-size:20px;
-    color:#e2e8f0;
-    margin-bottom:30px;
-}
-
-.main-btn{
-    width:100%;
-    max-width:640px;
-    padding:18px;
-    border:none;
-    border-radius:12px;
-    background:#2563eb;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    font-family:inherit;
-    transition:.3s;
-}
-
-.main-btn:hover{
-    transform:translateY(-2px);
-    background:#1d4ed8;
-}
-
-.card{
-    background:#1e293b;
-    border-radius:20px;
-    padding:28px;
-    margin:25px auto;
-    max-width:620px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-.card h2{
-    margin-top:0;
-}
-
-.services p{
-    font-size:18px;
-    margin:18px 0;
-}
-
-.hire{
-    margin-top:25px;
-}
-
-/* =========================
-   LEARNING WEBSITE
-========================= */
-
-#learningSite{
-    display:none;
-    padding:20px;
-    background:#0f172a;
-}
-
-.learning-header{
-    text-align:center;
-    padding:25px 10px;
-}
-
-.learning-header h1{
-    font-size:34px;
-    margin-bottom:5px;
-}
-
-.learning-header p{
-    color:#cbd5e1;
-}
-
-.learning-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-    margin:20px auto;
-    max-width:1000px;
-}
-
-.learning-nav a{
-    text-decoration:none;
-}
-
-.learning-nav button{
-    border:none;
-    padding:10px 15px;
-    border-radius:8px;
-    background:#2563eb;
-    color:white;
-    font-family:inherit;
-    cursor:pointer;
-}
-
-.learning-section{
-    max-width:1000px;
-    margin:25px auto;
-    background:#1e293b;
-    border-radius:18px;
-    padding:25px;
-}
-
-.learning-section h2{
-    margin-top:0;
-}
-
-.hero{
-    text-align:center;
-}
-
-.hero h1{
-    font-size:35px;
-}
-
-.hero h2{
-    color:#38bdf8;
-}
-
-.hero p{
-    color:#cbd5e1;
-}
-
-.start-btn,
-.contact-btn,
-.action-btn{
-    border:none;
-    padding:13px 20px;
-    margin:8px;
-    border-radius:10px;
-    background:#2563eb;
-    color:white;
-    font-family:inherit;
-    cursor:pointer;
-}
-
-.profile{
-    width:130px;
-    height:130px;
-    object-fit:cover;
-    border-radius:50%;
-    border:4px solid #2563eb;
-}
-
-.skill{
-    margin:18px 0;
-}
-
-.skill progress{
-    width:100%;
-    height:15px;
-}
-
-.notes{
-    background:#0f172a;
-    padding:20px;
-    border-radius:12px;
-}
-
-.review{
-    background:#0f172a;
-    padding:18px;
-    border-radius:12px;
-    margin:15px 0;
-}
-
-details{
-    background:#0f172a;
-    padding:15px;
-    border-radius:10px;
-    margin:10px 0;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:600;
-}
-
-input[type="text"],
-input[type="email"]{
-    width:100%;
-    max-width:500px;
-    padding:13px;
-    border:none;
-    border-radius:8px;
-    margin:8px 0;
-    font-family:inherit;
-}
-
-.project{
-    padding:18px;
-    background:#0f172a;
-    border-radius:12px;
-    margin:15px 0;
-}
-
-.project h3{
-    margin-bottom:5px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-}
-
-.stats .card{
-    margin:0;
-    text-align:center;
-}
-
-.slider{
-    max-width:700px;
-    margin:30px auto;
-}
-
-.slides{
-    width:100%;
-    border-radius:15px;
-    display:none;
-}
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#22c55e;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:28px;
-    z-index:1000;
-}
-
-.top-btn{
-    position:fixed;
-    right:20px;
-    bottom:85px;
-    display:none;
-    border:none;
-    padding:12px;
-    border-radius:8px;
-    background:#2563eb;
-    color:white;
-    cursor:pointer;
-}
-
-footer{
-    text-align:center;
-    padding:30px 10px;
-    color:#cbd5e1;
-}
-
-.back-btn{
-    margin-top:25px;
-    background:#334155;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    #portfolio{
-        padding:30px 15px;
-    }
-
-    .logo{
-        font-size:42px;
-    }
-
-    .intro h2{
-        font-size:25px;
-    }
-
-    .intro p{
-        font-size:17px;
-    }
-
-    .card{
-        padding:22px 18px;
-    }
-
-    .learning-section{
-        padding:20px 15px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-}
-</style>
-
- </head>
 
 <body>
 
-<h1>Vijay Babu</h1>
-<p>Web Developer | ECE Student | Founder of VjBabu.in</p>
 
-<!-- ==================================================
-     PORTFOLIO HOME
-================================================== -->
+<!-- NAVBAR -->
 
- <section id="portfolio">
+<header>
 
-<div class="hero">
+<nav class="navbar">
 
-<img src="vijay.jpg" class="profile" alt="Vijay Babu">
+<div class="logo">
+VjBabu<span>.in</span>
+</div>
 
-<h1>Hi, I'm Vijay Babu 👋</h1>
 
-<h2 id="typing"></h2>
+<ul class="nav-links">
 
-<p>
-Frontend Web Developer | B.Tech ECE Student | Founder of VjBabu.in
-</p>
+<li><a href="#home">Home</a></li>
 
-<a href="#projects">
-<button class="main-btn">💼 View My Projects</button>
-</a>
+<li><a href="#about">About</a></li>
 
-<a href="contact.html">
-<button class="main-btn">📞 Hire Me</button>
-</a>
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+
+<div class="menu-btn">
+☰
+</div>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+<!-- HERO SECTION -->
+
+<section id="home" class="hero">
+
+
+<div class="hero-content">
+
+
+<div class="profile-box">
+
+<img src="vijay.jpg" alt="Vijay Babu">
 
 </div>
-     <section class="card" id="contact">
 
-<h2>📞 Contact Me</h2>
+
+
+<h1>
+Hi, I'm <span>Vijay Babu</span> 👋
+</h1>
+
+
+<h2 id="typing">
+</h2>
+
+
+<p>
+
+Frontend Web Developer | B.Tech ECE Student |
+Founder of VjBabu.in
+
+</p>
+
+
+
+<div class="hero-buttons">
+
+<a href="#projects">
+
+<button class="btn">
+View Projects
+</button>
+
+</a>
+
+
+<a href="#contact">
+
+<button class="btn outline">
+Hire Me
+</button>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ABOUT SECTION -->
+
+
+<section id="about" class="section">
+
+
+<h2 class="title">
+About Me
+</h2>
+
+
+<div class="about-card">
+
+
+<p>
+
+I'm Vijay Babu, a passionate Frontend Web Developer
+and B.Tech ECE student from Andhra Pradesh.
+
+</p>
+
+
+<p>
+
+I create modern, responsive and user-friendly
+websites using HTML, CSS and JavaScript.
+
+</p>
+
+
+<p>
+
+My goal is to build creative digital solutions
+and help businesses grow online.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- SKILLS SECTION -->
+
+
+<section id="skills" class="section">
+
+
+<h2 class="title">
+My Skills
+</h2>
+
+
+
+<div class="skills-container">
+
+
+<div class="skill-card">
+
+<h3>
+HTML5
+</h3>
+
+<p>
+95%
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>
+CSS3
+</h3>
+
+<p>
+90%
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>
+JavaScript
+</h3>
+
+<p>
+80%
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>
+Python
+</h3>
+
+<p>
+70%
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>
+C / C++
+</h3>
+
+<p>
+75%
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>
+UI/UX Design
+</h3>
+
+<p>
+80%
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SERVICES SECTION -->
+
+
+<section id="services" class="section">
+
+
+<h2 class="title">
+My Services
+</h2>
+
+
+
+<div class="services-container">
+
+
+
+<div class="service-card">
+
+<h3>
+🌐 Website Development
+</h3>
+
+<p>
+Modern responsive websites for individuals and businesses.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<h3>
+🎨 UI/UX Design
+</h3>
+
+<p>
+Clean and attractive user interface designs.
+</p>
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+<h3>
+⚡ Frontend Development
+</h3>
+
+<p>
+Fast and interactive websites using latest technologies.
+</p>
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+<h3>
+📱 Responsive Design
+</h3>
+
+<p>
+Websites that work perfectly on mobile and desktop.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+<!-- PROJECTS SECTION -->
+
+<section id="projects" class="section">
+
+<h2 class="title">
+My Projects
+</h2>
+
+
+<div class="projects-container">
+
+
+
+<div class="project-card">
+
+<h3>
+🌐 VjBabu.in
+</h3>
+
+<p>
+A modern learning platform where students can learn coding courses, access notes and improve their skills.
+</p>
+
+<div class="tech">
+HTML • CSS • JavaScript
+</div>
+
+
+<a href="#" class="project-btn">
+Live Demo
+</a>
+
+
+</div>
+
+
+
+
+<div class="project-card">
+
+<h3>
+💻 Developer Portfolio
+</h3>
+
+<p>
+A professional personal portfolio website to showcase my skills, services and projects.
+</p>
+
+<div class="tech">
+HTML • CSS • JS
+</div>
+
+
+<a href="#" class="project-btn">
+Live Demo
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="project-card">
+
+<h3>
+🎓 Certificate Generator
+</h3>
+
+<p>
+A web-based certificate generation system with custom designs and verification details.
+</p>
+
+<div class="tech">
+HTML • CSS • JavaScript
+</div>
+
+
+<a href="#" class="project-btn">
+View Project
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="project-card">
+
+<h3>
+📱 Business Website
+</h3>
+
+<p>
+Responsive website designs for small businesses and startups.
+</p>
+
+
+<div class="tech">
+Frontend Development
+</div>
+
+
+<a href="#" class="project-btn">
+Explore
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- CONTACT SECTION -->
+
+
+<section id="contact" class="section">
+
+
+<h2 class="title">
+Contact Me
+</h2>
+
+
+
+<div class="contact-box">
+
+
 
 <form>
 
-<input type="text" placeholder="vijay babu" required>
 
-<input type="email" placeholder="vijaykumarjonnakuti0@gmail.com" required>
+<input 
+type="text"
+placeholder="Your Name"
+required>
 
-<textarea placeholder="Your Message" rows="5" required></textarea>
 
-<br><br>
 
-<button type="submit" class="main-btn">Send Message</button>
+<input
+type="email"
+placeholder="Your Email"
+required>
 
-</form>
 
-<br>
 
-<a href="mailto: vijaykumarjonnakuti0@gmail.com">
-<button class="main-btn">📧 Email Me</button>
-</a>
+<textarea
+rows="5"
+placeholder="Your Message">
+</textarea>
 
-<a href="https://wa.me/919032219791" target="_blank">
-<button class="main-btn">💬 WhatsApp</button>
-</a>
 
-<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
-<button class="main-btn">📷 Instagram</button>
-</a>
 
-     </section>
-
-<div class="card">
-
-<h2>👨‍💻 About Me</h2>
-
-<p>
-I'm Vijay Babu from Andhra Pradesh. I build responsive websites using HTML, CSS and JavaScript. My goal is to create modern, fast and user-friendly web applications.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>🚀 My Services</h2>
-
-<p>🌐 Portfolio Websites</p>
-<p>🏢 Business Websites</p>
-<p>🛒 E-Commerce Websites</p>
-<p>📱 Responsive Web Design</p>
-
-</div>
-
- </section>
-
-        </a>
-
-    </div>
-
-
-    <!-- ABOUT -->
-
-    <div class="card">
-
-        <h2>👋 About Me</h2>
-
-        <p>
-            Hi, I'm Vijay Kumar.
-        </p>
-
-        <p>
-            I'm a BTech ECE Student and Front-End Web Developer from Andhra Pradesh.
-        </p>
-
-        <p>
-            I create modern, responsive websites using HTML, CSS and JavaScript.
-        </p>
-
-    </div>
-
-</section>
-
-
- 
-
-    <!-- HERO -->
-
-    <section class="learning-section hero">
-
-        <img
-            src="vijay.jpg"
-            alt="Vijay"
-            class="profile"
-        >
-
-        <h1>
-            Learn With Vijay
-        </h1>
-
-        <h2>
-            Learn Coding for Free
-        </h2>
-
-        <p>
-            HTML • CSS • JavaScript • Python • Java • C • C++ • AI • More
-        </p>
-
-        <a href="courses.html">
-            <button class="start-btn">
-                🚀 Start Learning
-            </button>
-        </a>
-
-        <a href="contact.html">
-            <button class="contact-btn">
-                📞 Contact Us
-            </button>
-        </a>
-
-        <button
-            class="action-btn"
-            onclick="shareWebsite()">
-            📤 Share Website
-        </button>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="learning-section">
-
-        <h2>👋 About Me</h2>
-
-        <p>
-            Hi, I'm Vijay Kumar.
-        </p>
-
-        <p>
-            I'm a BTech ECE Student and Front-End Web Developer from Andhra Pradesh.
-        </p>
-
-        <p>
-            I create modern, responsive websites using HTML, CSS and JavaScript.
-        </p>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section class="learning-section">
-
-        <h2>💻 My Skills</h2>
-
-        <div class="skill">
-
-            <p>HTML</p>
-
-            <progress
-                value="95"
-                max="100">
-            </progress>
-
-        </div>
-
-        <div class="skill">
-
-            <p>CSS</p>
-
-            <progress
-                value="90"
-                max="100">
-            </progress>
-
-        </div>
-
-        <div class="skill">
-
-            <p>JavaScript</p>
-
-            <progress
-                value="75"
-                max="100">
-            </progress>
-
-        </div>
-
-        <p>✅ GitHub</p>
-
-        <p>✅ Responsive Web Design</p>
-
-    </section>
-
-
-    <!
-
-    <!-- MY PROJECTS -->
-
-    <section class="learning-section">
-
-        <h2>📂 My Projects</h2>
-
-        <div class="project">
-
-            <h3>🌐 Learn With Vijay</h3>
-
-            <p>
-                Online Learning Website
-            </p>
-
-            <a href="courses.html">
-                <button class="action-btn">
-                    🚀 Open Website
-                </button>
-            </a>
-
-        </div>
-
-
-        <div class="project">
-
-            <h3>📱 Mobile Shop Website</h3>
-
-            <p>
-                Responsive Business Website
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h3>🍽 Restaurant Website</h3>
-
-            <p>
-                Modern Restaurant Landing Page
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="learning-section">
-
-        <h2>📞 Contact Me</h2>
-
-        <p>
-            📧 learnwithvijay@gmail.com
-        </p>
-
-        <p>
-            📱 WhatsApp: +91 9032219791
-        </p>
-
-        <a href="https://instagram.com/vij_ay_the_ro_y_al"
-           target="_blank">
-
-            <button class="action-btn">
-                Instagram
-            </button>
-
-        </a>
-
-    </section>
-
-
-    <!-- REVIEWS -->
-
-    <section class="learning-section">
-
-        <h2>⭐ Student Reviews</h2>
-
-        <div class="review">
-
-            <h3>Rahul</h3>
-
-            <p>
-                "Excellent courses! Easy to understand."
-            </p>
-
-            ⭐⭐⭐⭐⭐
-
-        </div>
-
-
-        <div class="review">
-
-            <h3>Priya</h3>
-
-            <p>
-                "The HTML and CSS courses helped me build my first website."
-            </p>
-
-            ⭐⭐⭐⭐⭐
-
-        </div>
-
-
-        <div class="review">
-
-            <h3>Arjun</h3>
-
-            <p>
-                "Simple explanations and good practice examples."
-            </p>
-
-            ⭐⭐⭐⭐☆
-
-        </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-
-    <section class="learning-section">
-
-        <h2>❓ Frequently Asked Questions</h2>
-
-        <details>
-
-            <summary>
-                Are the courses free?
-            </summary>
-
-            <p>
-                Yes, many courses are available for free.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                Will I get a certificate?
-            </summary>
-
-            <p>
-                Certificates are available for eligible completed courses.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                Can I learn on my mobile?
-            </summary>
-
-            <p>
-                Yes, the website is designed to work on mobile devices.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                How can I contact Learn With Vijay?
-            </summary>
-
-            <p>
-                Use the Contact page or email us.
-            </p>
-
-        </details>
-
-    </section>
-
-
- 
-     
-        < 
-<!-- WHATSAPP -->
-
-<a
-    href="https://wa.me/919032219791"
-    class="whatsapp"
-    target="_blank">
-
-    💬
-
-</a>
-
-
-<!-- TOP BUTTON -->
-
-<button
-    id="topBtn"
-    class="top-btn"
-    onclick="topFunction()">
-
-    ⬆ Top
-
+<button class="btn">
+Send Message
 </button>
 
 
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
 
-<script>
+</form>
 
-/* VIEW PROJECTS */
 
-function openProjects(){
-
-    document.getElementById("portfolio").style.display = "none";
-
-    document.getElementById("learningSite").style.display = "block";
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* BACK TO PORTFOLIO */
-
-function closeProjects(){
-
-    document.getElementById("learningSite").style.display = "none";
-
-    document.getElementById("portfolio").style.display = "block";
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* SHARE */
-
-function shareWebsite(){
-
-    if(navigator.share){
-
-        navigator.share({
-
-            title:"Learn With Vijay",
-
-            text:"Learn coding for free!",
-
-            url:window.location.href
-
-        });
-
-    }else{
-
-        alert("Sharing is not supported on this device.");
-
-    }
-
-}
-
-
-/* QUIZ */
-
-function checkQuiz(){
-
-    let answer =
-        document.querySelector(
-            'input[name="q1"]:checked'
-        );
-
-    let result =
-        document.getElementById("quizResult");
-
-    if(answer && answer.value === "a"){
-
-        result.innerHTML =
-            "✅ Correct Answer!";
-
-    }else{
-
-        result.innerHTML =
-            "❌ Wrong Answer. Try Again!";
-
-    }
-
-}
-
-
-/* NEWSLETTER */
-
-function subscribe(){
-
-    let email =
-        document.getElementById("email").value;
-
-    let message =
-        document.getElementById("message");
-
-    if(email === ""){
-
-        message.innerHTML =
-            "❌ Please enter your email.";
-
-    }else{
-
-        message.innerHTML =
-            "✅ Thank you for subscribing!";
-
-    }
-
-}
-
-
-/* TOP BUTTON */
-
-let topBtn =
-    document.getElementById("topBtn");
-
-window.onscroll = function(){
-
-    if(document.documentElement.scrollTop > 200){
-
-        topBtn.style.display = "block";
-
-    }else{
-
-        topBtn.style.display = "none";
-
-    }
-
-};
-
-
-function topFunction(){
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-}
-
-
-/* IMAGE SLIDER */
-
-let slideIndex = 0;
-
-function showSlides(){
-
-    let slides =
-        document.getElementsByClassName("slides");
-
-    if(slides.length === 0){
-
-        return;
-
-    }
-
-    for(let i=0;i<slides.length;i++){
-
-        slides[i].style.display = "none";
-
-    }
-
-    slideIndex++;
-
-    if(slideIndex > slides.length){
-
-        slideIndex = 1;
-
-    }
-
-    slides[slideIndex-1].style.display = "block";
-
-    setTimeout(showSlides,3000);
-
-}
-
-showSlides();
-/* ===== Typing Animation ===== */
-
-const text = [
-  "Frontend Web Developer",
-  "Web Designer",
-  "Founder of VjBabu.in"
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-
-  if (count === text.length) {
-    count = 0;
-  }
-
-  currentText = text[count];
-  letter = currentText.slice(0, ++index);
-
-  document.getElementById("typing").textContent = letter;
-
-  if (letter.length === currentText.length) {
-    count++;
-    index = 0;
-    setTimeout(type, 1500);
-  } else {
-    setTimeout(type, 100);
-  }
-
-})();
-</script>
-
-
-</body>
-</html><div id="content" style="display:none;">
- 
-<button onclick="searchPage()">Search</button>
-<header>
-<h1>🌐 VjBabu.in</h1>
-<p>
-Designed & Developed by
-<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
-<b>Vijay Babu</b>
-</a> ❤️
-</p>
- 
-</header>
-   <button onclick="toggleTheme()" id="themeBtn">🌙 Dark / ☀️ Light</button>
-     <input type="text" id="search" placeholder="Search courses..." onkeyup="searchCourse()">
-
-   
-   <section class="banner">
-  <h1>👋 About Me
-
-Hi, I'm Vijay Kumar.
-
-I'm a BTech ECE student and Front-End Web Developer from Andhra Pradesh.
-
-I create modern, responsive websites using HTML, CSS and JavaScript.</h1>
-  <p>Learn Coding • Build Projects • Grow Your Career</p>
-      💻 My Skills
- 
-
-  <a href="courses.html">
-    <button class="start-btn">🚀 Start Learning</button>
-  </a>
-
-  <a href="contact.html">
-    <button class="contact-btn">📞 Contact Us</button>
-  </a>
-      <button onclick="shareWebsite()">📤 Share Website</button>
-
-<script>
-function shareWebsite(){
-  if(navigator.share){
-    navigator.share({
-      title:"Learn With Vijay",
-      text:"Learn coding for free!",
-      url:window.location.href
-    });
-  }else{
-    alert("Sharing is not supported on this device.");
-  }
-}
-</script>
-   </section>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="courses.html">Courses</a>
-  <a href="contact.html">Contact</a>
- <a href="login.html">Login</a>
- <a href="register.html">Register</a>
- <a href="dashboard.html">Dashboard</a>
- <a href="admin.html">Admin</a>
- <a href="profile.html">Profile</a>
- <a href="blog.html">Blog</a>
- <a href="settings.html">Settings</a>
- <a href="notifications.html">Notifications</a>
- <a href="support.html">Support</a>
- <a href="downloads.html">Downloads</a>
- <a href="achievements.html">Achievements</a>
- <a href="team.html">Team</a>
- <a href="career.html">Careers</a>
- <a href="privacy.html">Privacy</a>
- <a href="terms.html">Terms</a>
- <a href="sitemap.html">Sitemap</a>
- <a href="html-course.html">
- <a href="dashboard.html">Dashboard</a>
-     <a href="babu.html">Babu</a>
-    <a href="quiz.html">
-  <button>📝 Take Quiz</button>
-    </a>
-    </a>
-   <a href="certificate.html">
-  <button>🎓 Get Certificate</button>
-   </a>
-   <a href="courses.html">
-  <button class="start-btn">🚀 Start Learning</button>
-   </a>
-</nav>
- 
-
-<h2>Welcome to VjBabu.in</h2>
-   
-
-<p>
-Learn HTML, CSS, JavaScript and build amazing websites.
-</p>
-
-<button>Get Started</button>
-<button onclick="toggleTheme()">🌙 Dark Mode</button>
-   <section class="hero">
-  <h1>Learn With Vijay</h1>
-  <h2>Learn Coding for Free</h2>
-  <p>HTML • CSS • JavaScript • Python • Java • C • C++ • AI • More</p>
-      <section class="card" id="skills">
-<h2>💻 My Skills</h2>
-
-<div class="skill">
-<p>HTML</p>
-<progress value="95" max="100"></progress>
-</div>
-
-<div class="skill">
-<p>CSS</p>
-<progress value="90" max="100"></progress>
-</div>
-
-<div class="skill">
-<p>JavaScript</p>
-<progress value="75" max="100"></progress>
-</div>
-
-      </section>
-       <section class="card" id="projects">
-
-<h2>🚀 My Projects</h2>
-
-<div class="project-card">
-<h3>🌐 Learn With Vijay</h3>
-<p>Online learning platform built using HTML, CSS & JavaScript.</p>
-<a href="courses.html">
-<button class="main-btn">Open Project</button>
-</a>
-</div>
-
-<div class="project-card">
-<h3>👤 Personal Portfolio</h3>
-<p>Modern responsive portfolio website showcasing my skills and projects.</p>
-<button class="main-btn">Live Demo</button>
-</div>
-
-<div class="project-card">
-<h3>💼 Business Website</h3>
-<p>Professional business website with responsive design.</p>
-<button class="main-btn">View Project</button>
-</div>
-
-       </section>
-
-  <a href="#courses">
-    <button class="start-btn">🚀 Start Learning</button>
-  </a>
-      <h2>📄 Course Notes</h2>
-
-<div class="notes">
-  <h3>HTML Introduction</h3>
-  <p>HTML (HyperText Markup Language) is used to create web pages.</p>
-
-  <h3>Basic Tags</h3>
-  <ul>
-    <li>&lt;html&gt;</li>
-    <li>&lt;head&gt;</li>
-    <li>&lt;body&gt;</li>
-    <li>&lt;h1&gt; to &lt;h6&gt;</li>
-    <li>&lt;p&gt;</li>
-  </ul>
-</div>
-   </section>
-   <h2>📝 Quick Quiz</h2>
-
-<p>1. HTML stands for?</p>
-
-<input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
-<input type="radio" name="q1" value="b"> High Text Machine Language<br><br>
-
-<button onclick="checkQuiz()">Submit</button>
-
-<p id="quizResult"></p>
-
-<script>
-function checkQuiz(){
-  let answer = document.querySelector('input[name="q1"]:checked');
-
-  if(answer && answer.value=="a"){
-    document.getElementById("quizResult").innerHTML="✅ Correct Answer!";
-  }else{
-    document.getElementById("quizResult").innerHTML="❌ Wrong Answer. Try Again!";
-  }
-}
-</script>
-<section>
-  
-</section>
-  <div class="about" id="about">
-   
-  </div>
-   <div class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: learnwithvijay@gmail.com</p>
-  <p>Follow us for more courses</p>
-   </div>
-   <section class="reviews">
-  <h2>⭐ Student Reviews</h2>
-
-  <div class="review">
-    <h3>Rahul</h3>
-    <p>"Excellent courses! Easy to understand."</p>
-    ⭐⭐⭐⭐⭐
-  </div>
-
-  <div class="review">
-    <h3>Priya</h3>
-    <p>"The HTML and CSS courses helped me build my first website."</p>
-    ⭐⭐⭐⭐⭐
-  </div>
-
-  <div class="review">
-    <h3>Arjun</h3>
-    <p>"Simple explanations and good practice examples."</p>
-    ⭐⭐⭐⭐☆
-  </div>
-   </section>
-   <section class="faq">
-  <h2>❓ Frequently Asked Questions</h2>
-
-  <details>
-    <summary>Are the courses free?</summary>
-    <p>Yes, many courses are available for free.</p>
-  </details>
-
-  <details>
-    <summary>Will I get a certificate?</summary>
-    <p>Certificates are available for eligible completed courses.</p>
-  </details>
-
-  <details>
-    <summary>Can I learn on my mobile?</summary>
-    <p>Yes, the website is designed to work on mobile devices.</p>
-  </details>
-
-  <details>
-    <summary>How can I contact Learn With Vijay?</summary>
-    <p>Use the Contact page or email us.</p>
-  </details>
-   </section>
-   <section class="newsletter">
-  <h2>📩 Subscribe for Updates</h2>
-  <p>Get updates about new courses and tutorials.</p>
-
-  <input type="email" id="email" placeholder="Enter your email">
-  <button onclick="subscribe()">Subscribe</button>
-
-  <p id="message"></p>
-</section>
-
-<script>
-function subscribe(){
-  let email = document.getElementById("email").value;
-
-  if(email==""){
-    document.getElementById("message").innerHTML="❌ Please enter your email.";
-  }else{
-    document.getElementById("message").innerHTML="✅ Thank you for subscribing!";
-  }
-}
-</script>
-
-<footer>
-
-<p>© 2026 VjBabu.in</p>
-
-<p>Designed & Developed by Vijay Babu ❤️</p>
-
-<p>All Rights Reserved.</p>
-  <section class="hero">
-<img src="vijay.jpg" alt="Vijay" class="profile">
-
- 
-
-<a href="courses.html">
-<button>Explore Courses</button>
-</a>
-    <button>Donate Now</button>
-      <button onclick="donate()">Donate Now</button>
-
-<script>
-function donate(){
-  window.location.href = "upi://pay?pa=9032219791@ybl&pn=YourName&cu=INR";
-}
-</script>
-    
-<section class="card" id="skills">
-    <h2>💻 My Skills</h2>
-
-    <p>✅ HTML</p>
-    <p>✅ CSS</p>
-    <p>✅ JavaScript</p>
-    <p>✅ GitHub</p>
-    <p>✅ Responsive Web Design</p>
-   <section class="card" id="projects">
-    <h2>📂 My Projects</h2>
-      <section class="card" id="contact">
-    <h2>📞 Contact Me</h2>
-
-    <p>📧 learnwithvijay@gmail.com</p>
-    <p>📱 WhatsApp: +91 9032219791</p>
-
-    <a href="https://instagram.com/vij_ay_the_ro_y_al">
-        <button>Instagram</button>
-    </a>
-      </section>
-
-    <h3>🌐 Learn With Vijay</h3>
-    <p>Online Learning Website</p>
-
-    <h3>📱 Mobile Shop Website</h3>
-    <p>Responsive Business Website</p>
-
-    <h3>🍽 Restaurant Website</h3>
-    <p>Modern Restaurant Landing Page</p>
-   </section>
-</section>
-  </section>
-  <section class="stats">
-   <div class="profile-card">
-  <img src="profile.jpg" alt="Vijay Babu">
-  <h2>Vijay Babu</h2>
-  <p>Founder of VjBabu.in</p>
-
-  <p>📚 Courses: 3</p>
-  <p>🎓 Certificates: 0</p>
-  <p>⭐ Level: Beginner</p>
-   </div>
-<section class="card">
-
-<h2>📄 Resume</h2>
-
-<a href="resume.pdf" download>
-<button>⬇ Download Resume</button>
-</a>
-
-</section>
-<div class="card">
-<h2 id="students">0</h2>
-<p>Students</p>
-</div>
-
-<div class="card">
-<h2 id="courses">0</h2>
-<p>Courses</p>
-</div>
-
-<div class="card">
-<h2 id="visitors">0</h2>
-<p>Visitors</p>
-</div>
-     <section class="stats">
-
-<div class="card">
-<h2>5+</h2>
-<p>Projects</p>
-</div>
-
-<div class="card">
-<h2>100%</h2>
-<p>Responsive</p>
-</div>
-
-<div class="card">
-<h2>24/7</h2>
-<p>Support</p>
-</div>
-         <section class="card">
-
-<h2>📊 Website Statistics</h2>
-
-<div class="stats">
-
-<div>
-<h3 id="visitorCount">0</h3>
-<p>Visitors</p>
-</div>
-
-<div>
-<h3 id="projectCount">0</h3>
-<p>Projects</p>
-</div>
-
-<div>
-<h3 id="courseCount">0</h3>
-<p>Courses</p>
-</div>
-
-</div>
-
-         </section>
-<section class="card">
-    
-
-<h2>🌍 Follow Me</h2>
-
-<a href="https://instagram.com/vij_ay_the_ro_y_al">
-<button>Instagram</button>
-</a>
-
- 
- 
-</a>
-
-</section>
-     </section>
-
-  </section>
-  <div class="slider">
-
-<img class="slides" src="image1.jpg">
-
-<img class="slides" src="image2.jpg">
-
-<img class="slides" src="image3.jpg">
-
-  </div>
-
-</footer>
-<script>
-function searchPage() {
-  let input = document.getElementById("search").value.toLowerCase();
-
-  if (input === "home") {
-    window.location.href = "index.html";
-  } else if (input === "about") {
-    window.location.href = "about.html";
-  } else if (input === "courses") {
-    window.location.href = "courses.html";
-  } else if (input === "contact") {
-    window.location.href = "contact.html";
-  } else if (input === "blog") {
-    window.location.href = "blog.html";
-  } else if (input === "profile") {
-    window.location.href = "profile.html";
-  } else {
-    alert("Page not found!");
-  }
-}
-  </script>
-  <script>
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-}
-  </script>
-  <button id="topBtn" onclick="topFunction()">⬆ Top</button>
-
-<script>
-let topBtn = document.getElementById("topBtn");
-
-window.onscroll = function() {
-  if (document.documentElement.scrollTop > 100) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
-
-function topFunction() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-</script>
-  <script>
-let index = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    index++;
-
-    if (index > slides.length) {
-        index = 1;
-    }
-
-    slides[index - 1].style.display = "block";
-
-    setTimeout(showSlides, 3000);
-}
-  </script>
-  <a href="https://wa.me/919032219791" class="whatsapp" target="_blank">
-💬
-  </a>
-  </div>
-
-<script>
-window.onload = function () {
-    setTimeout(function () {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("content").style.display = "block";
-    }, 2000);
-};
-</script>
-  <script>
-function counter(id, end, speed){
-    let count = 0;
-    let obj = document.getElementById(id);
-
-    let timer = setInterval(function(){
-        count++;
-        obj.innerHTML = count + "+";
-
-        if(count >= end){
-            clearInterval(timer);
-        }
-    }, speed);
-}
-
-counter("students", 1000, 2);
-counter("courses", 25, 50);
-counter("visitors", 10000, 1);
-      <h2 id="typing"></h2>
-  </script>
- <div class="about">
-  <h2>👋 About Me</h2>
-
-  <p>
-    Hi, I'm Vijay Kumar.<br><br>
-
-    I'm a BTech ECE Student and Front-End Web Developer from Andhra Pradesh.<br><br>
-
-    I create modern, responsive websites using HTML, CSS and JavaScript.
-  </p>
- </div>
-<section class="card" id="skills">
-
-<h2>💻 My Skills</h2>
-
-<p>HTML</p>
-<progress value="95" max="100"></progress>
-
-<p>CSS</p>
-<progress value="90" max="100"></progress>
-
-<p>JavaScript</p>
-<progress value="80" max="100"></progress>
-
-<p>Responsive Design</p>
-<progress value="85" max="100"></progress>
-
-<p>GitHub</p>
-<progress value="75" max="100"></progress>
-
-</section>
-     <script>
-function searchCourse(){
- let input=document.getElementById("search").value.toLowerCase();
- let courses=document.getElementsByClassName("course");
-
- for(let i=0;i<courses.length;i++){
-   courses[i].style.display =
-   courses[i].innerText.toLowerCase().includes(input)
-   ? "block" : "none";
- }
-}
-     </script>
-     <footer>
-  <h3>Learn With Vijay</h3>
-  <p>Learn Skills • Build Your Future</p>
-  <p>© 2026 All Rights Reserved</p>
-     </footer>
-window.addEventListener("load", function(){
-
-    document.getElementById("loader").style.display = "none";
-
-    document.getElementById("mainContent").style.display = "block";
-
-});
-/* ===== SCROLL REVEAL ===== */
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-document.querySelectorAll(".hidden").forEach((el) => {
-    observer.observe(el);
-});
-function toggleTheme(){
-
-    document.body.classList.toggle("light-mode");
-
-}
-function toggleMenu(){
-    document.getElementById("navbar").classList.toggle("show");
-}
-
-function animateCounter(id, target, speed){
-
-    let count = 0;
-
-    const element = document.getElementById(id);
-
-    const timer = setInterval(function(){
-
-        count++;
-
-        element.innerHTML = count + "+";
-
-        if(count >= target){
-            clearInterval(timer);
-        }
-
-    }, speed);
-
-}
-
-animateCounter("visitorCount", 5000, 1);
-animateCounter("projectCount", 15, 80);
-animateCounter("courseCount", 25, 50);
-
-     <script>
-function toggleTheme(){
-  document.body.classList.toggle("light-mode");
-}
-     </script>
-<footer class="footer">
-
-<h2>🌐 VjBabu.in</h2>
-
-<p>Designed & Developed by Vijay Babu ❤️</p>
-
-<p>Frontend Web Developer | ECE Student</p>
 
 <div class="social-links">
 
-<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">Instagram</a>
 
-<a href="https://github.com/vjbabu-in" target="_blank">GitHub</a>
+<h3>
+Connect With Me
+</h3>
 
-<a href="mailto: vijaykumarjonnakuti0@gmail.com">Email</a>
 
-<a href="https://wa.me/919032219791" target="_blank">WhatsApp</a>
+<a href="mailto:vijaykumarjonnakuti0@gmail.com">
+📧 Email
+</a>
+
+
+<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
+📷 Instagram
+</a>
+
+
+
+<a href="https://github.com/" target="_blank">
+💻 GitHub
+</a>
+
+
+
+<a href="#">
+🔗 LinkedIn
+</a>
+
+
 
 </div>
-    <div id="loader">
-    <div class="spinner"></div>
-    <h2>Loading VjBabu.in...</h2>
+
+
+
 </div>
 
-<div id="mainContent" style="display:none;">
 
-<p>© 2026 VjBabu.in | All Rights Reserved.</p>
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<h2>
+VjBabu.in
+</h2>
+
+
+<p>
+Learn Skills • Build Your Future
+</p>
+
+
+<p>
+© 2026 Vijay Babu. All Rights Reserved.
+</p>
+
+
+<p>
+Designed & Developed by Vijay Babu ❤️
+</p>
+
 
 </footer>
+
+
+
+
+
+<!-- BACK TO TOP BUTTON -->
+
+
+<button id="topBtn">
+⬆
+</button>
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
