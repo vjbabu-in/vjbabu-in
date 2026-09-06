@@ -1,118 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Certificate</title>
 
-<style>
-body{
-    background:#f2f2f2;
-    font-family:Arial, sans-serif;
-    text-align:center;
-}
+<meta charset="UTF-8">
 
-.certificate{
-    width:800px;
-    min-height:550px;
-    background:white;
-    margin:40px auto;
-    padding:30px;
-    border:10px solid #333;
-    box-shadow:0 0 15px gray;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-h1{
-    font-size:40px;
-}
+<title>Certificate | Learn With Vijay</title>
 
-.name{
-    font-size:32px;
-    font-weight:bold;
-}
-
-.signature{
-    margin-top:40px;
-}
-
-.signature img{
-    width:120px;
-}
-
-input{
-    padding:10px;
-    font-size:16px;
-}
-
-button{
-    padding:10px 20px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<div class="certificate">
 
-<h1>🏆 Certificate of Completion</h1>
+<header>
 
-<h2>This Certificate is Awarded to</h2>
+<nav class="navbar">
 
-<h1 class="name" id="studentName">Student Name</h1>
-
-<p>For Successfully Completing the</p>
-
-<h2>HTML Course</h2>
-
-<p>Issued by <b>Learn With Vijay</b></p>
-
-<h3>Certificate ID: LWV-2026-0001</h3>
-
-<p>Status: ✅ Verified</p>
-
-
-<div class="edited-photo (1).png">
-
-<p>Authorized By</p>
-
-<img src="images/signature.png">
-
-<p><b>Vijay Babu</b></p>
-
-<p>Founder, Learn With Vijay</p>
-
+<div class="logo">
+Learn With <span>Vijay</span>
 </div>
 
-</div>
+</nav>
+
+</header>
 
 
-<h3>This Certificate is Presented to</h3>
 
-<input type="text" id="name" placeholder="Enter Your Name">
+
+
+<section class="course-hero">
+
+<h1>
+🎓 Certificate Generator
+</h1>
+
+<p>
+Generate your course completion certificate
+</p>
+
+
+<a href="courses.html">
+
+<button class="btn">
+⬅ Back To Courses
+</button>
+
+</a>
+
+</section>
+
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="course-card">
+
+
+<h2>
+Enter Your Name
+</h2>
+
+
+<input 
+type="text"
+id="studentName"
+placeholder="Your Name"
+class="certificate-input">
+
+
 
 <br><br>
 
-<button onclick="showCertificate()">Generate Certificate</button>
 
-<br><br>
+<button class="course-btn" onclick="generateCertificate()">
 
-<button onclick="window.print()">🖨️ Download / Print Certificate</button>
+Generate Certificate
+
+</button>
+
+
+
+</div>
+
+
+<br>
+
+
+
+
+<div id="certificate" class="certificate-box">
+
+
+<h1>
+🏆 Certificate of Completion
+</h1>
+
+
+<p>
+This certificate is proudly presented to
+</p>
+
+
+<h2 id="name">
+Student Name
+</h2>
+
+
+<p>
+
+For successfully completing
+
+</p>
+
+
+<h2>
+Learn With Vijay Course
+</h2>
+
+
+<p>
+HTML • CSS • JavaScript • Programming
+</p>
+
+
+<h3>
+Issued by Vijay Babu ❤️
+</h3>
+
+
+</div>
+
+
+
+<br>
+
+
+<button class="course-btn" onclick="window.print()">
+
+🖨 Print Certificate
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<h2>
+Learn With Vijay
+</h2>
+
+<p>
+Learn Skills • Build Your Future ❤️
+</p>
+
+</footer>
+
+
+
+
 
 
 <script>
 
-function showCertificate(){
+function generateCertificate(){
 
-let name = document.getElementById("name").value;
+let name =
+document.getElementById("studentName").value;
 
-document.getElementById("studentName").innerHTML = name;
+
+if(name==""){
+
+alert("Please enter your name");
+
+return;
 
 }
+
+
+document.getElementById("name").innerHTML=name;
+
+
+}
+
+
 
 </script>
 
 
+
 </body>
+
 </html>
