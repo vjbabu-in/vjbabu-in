@@ -1,55 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register - VjBabu.in</title>
+
+<title>Register | Learn With Vijay</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<header>
-<h1>📝 Create Account</h1>
-</header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="courses.html">Courses</a>
-<a href="contact.html">Contact</a>
-<a href="login.html">Login</a>
-<a href="register.html">Register</a>
-</nav>
+<section class="section">
 
-<section>
 
-<h2>Create Your Account</h2>
+<div class="course-card">
 
-<form onsubmit="return registerUser()">
 
-<input type="text" id="name" placeholder="Full Name" required><br><br>
+<h1>
+📝 Create Account
+</h1>
 
-<input type="email" id="email" placeholder="Email" required><br><br>
 
-<input type="password" id="password" placeholder="Create Password" required><br><br>
+<input 
+type="text"
+id="name"
+placeholder="Enter Name"
+class="certificate-input">
 
-<button type="submit">Register</button>
 
-</form>
+<br><br>
+
+
+<input 
+type="email"
+id="email"
+placeholder="Enter Email"
+class="certificate-input">
+
+
+<br><br>
+
+
+<input 
+type="password"
+id="password"
+placeholder="Create Password"
+class="certificate-input">
+
+
+<br><br>
+
+
+<button class="course-btn" onclick="register()">
+
+Register
+
+</button>
+
+
+<p id="message"></p>
+
+
+<a href="login.html">
+
+<button class="btn">
+
+Already have account? Login
+
+</button>
+
+</a>
+
+
+</div>
+
 
 </section>
 
-<footer>
-<p>© 2026 VjBabu.in</p>
-<p>Designed & Developed by <b>Vijay Babu</b> ❤️</p>
-</footer>
+
+
+
 
 <script>
-function registerUser(){
-alert("Registration Successful!");
-return false;
+
+function register(){
+
+let name =
+document.getElementById("name").value;
+
+let email =
+document.getElementById("email").value;
+
+let password =
+document.getElementById("password").value;
+
+
+localStorage.setItem("name",name);
+
+localStorage.setItem("email",email);
+
+localStorage.setItem("password",password);
+
+
+
+document.getElementById("message").innerHTML =
+"✅ Registration Successful";
+
+
 }
+
+
 </script>
 
+
 </body>
+
 </html>
