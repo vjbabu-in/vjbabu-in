@@ -746,3 +746,235 @@ TOP BUTTON
     display:none;
 
 }
+ 
+/* =====================
+ANIMATIONS
+===================== */
+
+
+.section{
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* =====================
+MOBILE RESPONSIVE
+===================== */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+    padding:20px;
+
+}
+
+
+
+.nav-links{
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:#050816;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+
+    display:none;
+
+}
+
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+
+
+.hero h2{
+
+    font-size:22px;
+
+}
+
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
+
+.profile-box img{
+
+    width:140px;
+
+    height:140px;
+
+}
+
+
+
+.title{
+
+    font-size:32px;
+
+}
+
+
+
+.section{
+
+    padding:60px 20px;
+
+}
+
+
+
+.skills-container,
+.services-container,
+.projects-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.about-card{
+
+    padding:25px;
+
+}
+
+
+
+.btn{
+
+    width:90%;
+
+}
+
+
+
+}
+
+
+
+
+
+
+/* =====================
+GLOW EFFECT
+===================== */
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:#00f5ff;
+
+    filter:blur(150px);
+
+    opacity:.3;
+
+}
+
+
+
+
+
+/* =====================
+SMOOTH HOVER
+===================== */
+
+
+a,
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+
+
+/* =====================
+SELECTION COLOR
+===================== */
+
+
+::selection{
+
+    background:#00f5ff;
+
+    color:#000;
+
+}
