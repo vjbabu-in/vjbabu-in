@@ -1,71 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>HTML Quiz</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz | Learn With Vijay</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<h1>HTML Quiz</h1>
-  <h2>📝 HTML Quiz</h2>
 
-<p>1. HTML stands for?</p>
-<input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
-<input type="radio" name="q1" value="b"> High Text Machine Language<br><br>
+<header>
 
-<p>2. Which tag is used for a heading?</p>
-<input type="radio" name="q2" value="a"> &lt;h1&gt;<br>
-<input type="radio" name="q2" value="b"> &lt;title&gt;<br><br>
+<nav class="navbar">
 
-<p>3. Which tag is used for a paragraph?</p>
-<input type="radio" name="q3" value="a"> &lt;p&gt;<br>
-<input type="radio" name="q3" value="b"> &lt;img&gt;<br><br>
+<div class="logo">
+Learn With <span>Vijay</span>
+</div>
 
-<button onclick="checkQuiz()">Submit Quiz</button>
+</nav>
 
-<p id="result"></p>
+</header>
 
-<p>1. HTML stands for?</p>
 
-<input type="radio" name="q1"> Hyper Text Markup Language<br>
-<input type="radio" name="q1"> High Text Machine Language<br><br>
 
-<button onclick="checkAnswer()">Submit</button>
-  <script>
-function checkQuiz(){
-  let score = 0;
 
-  if(document.querySelector('input[name="q1"]:checked')?.value=="a"){
-    score++;
-  }
 
-  if(document.querySelector('input[name="q2"]:checked')?.value=="a"){
-    score++;
-  }
+<section class="course-hero">
 
-  if(document.querySelector('input[name="q3"]:checked')?.value=="a"){
-    score++;
-  }
+<h1>
+📝 Coding Quiz
+</h1>
 
-  document.getElementById("result").innerHTML =
-    "🎉 Your Score: " + score + " / 3";
-}
-    if(score >= 3){
-  document.getElementById("certificateBtn").style.display = "block";
-    }
-    if(score >= 3){
-    document.getElementById("certificateBtn").style.display = "block";
-    }
-  </script>
+<p>
+Test your programming knowledge
+</p>
 
-<p id="result"></p>
-  <button onclick="location.reload()">🔄 Retake Quiz</button>
+
+<a href="courses.html">
+<button class="btn">
+⬅ Back To Courses
+</button>
+</a>
+
+
+</section>
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="course-card">
+
+
+<h2>
+Question 1
+</h2>
+
+<p>
+HTML stands for?
+</p>
+
+
+<label>
+<input type="radio" name="q1" value="correct">
+Hyper Text Markup Language
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q1">
+High Text Machine Language
+</label>
+
+
+
+
+<h2>
+Question 2
+</h2>
+
+<p>
+Which language is used for styling websites?
+</p>
+
+
+<label>
+<input type="radio" name="q2">
+JavaScript
+</label>
+
+<br>
+
+
+<label>
+<input type="radio" name="q2" value="correct">
+CSS
+</label>
+
+
+
+
+<h2>
+Question 3
+</h2>
+
+<p>
+Python is a ______ language.
+</p>
+
+
+<label>
+<input type="radio" name="q3" value="correct">
+Programming
+</label>
+
+<br>
+
+
+<label>
+<input type="radio" name="q3">
+Markup
+</label>
+
+
+
+<br><br>
+
+
+<button class="course-btn" onclick="checkQuiz()">
+Submit Quiz
+</button>
+
+
+<h2 id="result"></h2>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<h2>
+Learn With Vijay
+</h2>
+
+<p>
+Learn Skills • Build Your Future ❤️
+</p>
+
+</footer>
+
+
+
+
+
 
 <script>
-function checkAnswer(){
-  document.getElementById("result").innerHTML =
-  "✅ Great! Keep Learning.";
+
+function checkQuiz(){
+
+let score=0;
+
+
+let answers=document.querySelectorAll(
+"input[type=radio]:checked"
+);
+
+
+answers.forEach(function(answer){
+
+if(answer.value=="correct"){
+
+score++;
+
 }
+
+});
+
+
+document.getElementById("result").innerHTML =
+"Your Score: "+score+"/3 🎉";
+
+
+}
+
+
 </script>
 
+
+
 </body>
+
 </html>
