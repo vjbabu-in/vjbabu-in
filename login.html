@@ -1,53 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animated Login</title>
 
-<link rel="stylesheet" href="login.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | Learn With Vijay</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-  <img src="man.gif" class="man" alt="Walking Man">
 
-  <img src="box.png" class="box" alt="Box">
+<section class="section">
 
-  <div class="login" id="login">
-    <h2>Login</h2>
 
-    <form onsubmit="return loginUser()">
-  <input type="text" id="username" placeholder="Username" required>
+<div class="course-card">
 
-  <input type="password" id="password" placeholder="Password" required>
-<label>
-  <input type="checkbox" onclick="togglePassword()">
-  Show Password
-</label>
+
+<h1>
+🔐 Student Login
+</h1>
+
+
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email"
+class="certificate-input">
+
 
 <br><br>
 
-<label>
-  <input type="checkbox" id="remember">
-  Remember Me
-</label>
-  <button type="submit">Login</button>
-    </form>d">
 
-    <button onclick="login()">Login</button>
-  </div>
-  <div class="login-container">
-    <div class="login-box">
-        ...
-    </div>
-  </div>
-   
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+class="certificate-input">
+
+
+<br><br>
+
+
+
+<button class="course-btn" onclick="login()">
+
+Login
+
+</button>
+
+
+
+<p id="message"></p>
+
+
+
+<a href="register.html">
+
+<button class="btn">
+
+Create New Account
+
+</button>
+
+</a>
+
+
+
 </div>
 
-<script src="login.js"></script>
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+function login(){
+
+
+let email =
+document.getElementById("email").value;
+
+
+let password =
+document.getElementById("password").value;
+
+
+
+let savedEmail =
+localStorage.getItem("email");
+
+
+let savedPassword =
+localStorage.getItem("password");
+
+
+
+if(email == savedEmail && password == savedPassword){
+
+
+alert("✅ Login Successful");
+
+
+window.location.href="dashboard.html";
+
+
+}
+
+
+else{
+
+
+document.getElementById("message").innerHTML =
+"❌ Wrong Email or Password";
+
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
 
 </body>
-</html>
+
+</html> 
