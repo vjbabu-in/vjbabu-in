@@ -978,3 +978,154 @@ SELECTION COLOR
     color:#000;
 
 }
+/* =========================
+   COURSES PAGE DESIGN
+========================= */
+
+.course-hero{
+
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    border-radius:25px;
+    margin:30px auto;
+    max-width:1000px;
+
+}
+
+
+.course-hero h1{
+
+    font-size:45px;
+    margin-bottom:15px;
+
+}
+
+
+.course-hero h2{
+
+    color:#38bdf8;
+    font-size:28px;
+
+}
+
+
+.course-hero p{
+
+    color:#cbd5e1;
+    font-size:18px;
+
+}
+
+
+
+
+
+.course-container{
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+
+}
+
+
+
+
+.course-card{
+
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+
+
+.course-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.course-card h2{
+
+    color:#38bdf8;
+    margin-bottom:15px;
+
+}
+
+
+
+.course-card p{
+
+    color:#cbd5e1;
+    line-height:1.6;
+
+}
+
+
+
+
+.course-btn{
+
+    display:inline-block;
+    margin:8px;
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-family:Poppins;
+    transition:.3s;
+
+}
+
+
+
+.course-btn:hover{
+
+    background:#1d4ed8;
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.course-hero h1{
+
+    font-size:32px;
+
+}
+
+
+.course-hero h2{
+
+    font-size:22px;
+
+}
+
+
+.course-card{
+
+    padding:20px;
+
+}
+
+
+}
