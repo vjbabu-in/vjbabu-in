@@ -4,43 +4,46 @@
 
 
 // Typing Effect
-let typingText; = document.getElementById("typing");
+window.addEventListener("DOMContentLoaded", () => {
 
-let text = "Frontend Web Developer";
-let index = 0;
-
-function typingEffect() {
-
-    if(index < text.length){
-
-        typingText.innerHTML += text.charAt(index);
-        index++;
-
-        setTimeout(typingEffect,100);
-
-    }
-
-}
-
-window.addEventListener("load", ()=>{
-
-    typingText = document.getElementById("typing");
+    const typingText = document.getElementById("typing");
 
     if(typingText){
+
+        const text = "Frontend Web Developer";
+        let index = 0;
+
+        typingText.innerHTML = "";
+
+        function typingEffect(){
+
+            if(index < text.length){
+
+                typingText.innerHTML += text.charAt(index);
+                index++;
+
+                setTimeout(typingEffect,100);
+
+            }
+
+        }
+
         typingEffect();
+
     }
 
 });
 
 
 
-// Smooth Scroll Navigation
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+// Smooth Scroll
 
-    link.addEventListener("click", function(e){
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
 
-        let target = document.querySelector(this.getAttribute("href"));
+    link.addEventListener("click",function(e){
+
+        const target = document.querySelector(this.getAttribute("href"));
 
         if(target){
 
@@ -64,7 +67,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const topBtn = document.getElementById("topBtn");
 
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll",()=>{
 
     if(topBtn){
 
@@ -72,9 +75,7 @@ window.addEventListener("scroll", ()=>{
 
             topBtn.style.display="block";
 
-        }
-
-        else{
+        }else{
 
             topBtn.style.display="none";
 
@@ -85,17 +86,13 @@ window.addEventListener("scroll", ()=>{
 });
 
 
-
 if(topBtn){
 
-    topBtn.addEventListener("click", ()=>{
+    topBtn.addEventListener("click",()=>{
 
         window.scrollTo({
-
             top:0,
-
             behavior:"smooth"
-
         });
 
     });
@@ -105,96 +102,93 @@ if(topBtn){
 
 
 
-// Scroll Reveal Animation
+// Scroll Animation
 
 const cards = document.querySelectorAll(
 ".skill-card, .service-card, .project-card, .about-card"
 );
 
 
-window.addEventListener("scroll", ()=>{
+function revealCards(){
 
+    cards.forEach(card=>{
 
-cards.forEach(card=>{
+        let top = card.getBoundingClientRect().top;
 
+        if(top < window.innerHeight - 100){
 
-let position = card.getBoundingClientRect().top;
+            card.classList.add("show");
 
-let screenHeight = window.innerHeight;
+        }
 
-
-if(position < screenHeight - 100){
-
-    card.classList.add("show");
+    });
 
 }
 
 
-});
-
-
-});
-
+window.addEventListener("scroll",revealCards);
+window.addEventListener("load",revealCards);
 
 
 
-// Contact Form Message
+
+
+// Contact Form
 
 const form = document.querySelector("form");
 
 
 if(form){
 
-form.addEventListener("submit", function(e){
+    form.addEventListener("submit",(e)=>{
 
-    e.preventDefault();
+        e.preventDefault();
 
-    alert("Thank you for contacting Vijay Babu! 🚀");
+        alert("Thank you for contacting Vijay Babu 🚀");
 
-    form.reset();
+        form.reset();
 
-});
+    });
 
 }
 
 
 
 
-// Console Message
 
-console.log(
-"Welcome to VjBabu.in 🚀 Designed & Developed by Vijay Babu"
-);
-// Mobile Navbar Menu
+// Mobile Menu
 
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
 
 
-if(menuBtn){
+if(menuBtn && navLinks){
 
-menuBtn.addEventListener("click",()=>{
+    menuBtn.addEventListener("click",()=>{
 
-    navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-});
+    });
 
 }
+
+
+
+
+
 // Skills Progress Animation
 
 const progressBars = document.querySelectorAll(".progress-bar");
 
 
-window.addEventListener("scroll", ()=>{
+function progressAnimation(){
 
     progressBars.forEach(bar=>{
 
-        let position = bar.getBoundingClientRect().top;
-
-        let screenHeight = window.innerHeight;
+        let top = bar.getBoundingClientRect().top;
 
 
-        if(position < screenHeight - 50){
+        if(top < window.innerHeight - 50){
 
             bar.classList.add("animate");
 
@@ -202,4 +196,16 @@ window.addEventListener("scroll", ()=>{
 
     });
 
-});
+}
+
+
+window.addEventListener("scroll",progressAnimation);
+window.addEventListener("load",progressAnimation);
+
+
+
+
+
+console.log(
+"Welcome to VjBabu.in 🚀 Designed & Developed by Vijay Babu"
+);
