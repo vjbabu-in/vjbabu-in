@@ -366,32 +366,23 @@ SKILLS SECTION
 
 
 .skill-card{
-
-    padding:30px;
-
-    text-align:center;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:20px;
-
-    border:1px solid rgba(255,255,255,.1);
-
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(0,245,255,.15);
+    border-radius:22px;
+    padding:35px;
     transition:.4s;
-
 }
-
-
 
 .skill-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 0 25px #00f5ff;
-
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:
+      0 0 20px rgba(0,245,255,.5),
+      0 0 50px rgba(0,245,255,.2);
 }
+
+
+ 
 
 
 
@@ -1183,13 +1174,15 @@ SELECTION COLOR
 body{
     margin:0;
     font-family:'Poppins',sans-serif;
-    background:
-      radial-gradient(circle at top left, rgba(0,245,255,.18), transparent 30%),
-      radial-gradient(circle at top right, rgba(37,99,235,.18), transparent 30%),
-      linear-gradient(180deg, #050816, #0f172a);
     color:#fff;
     overflow-x:hidden;
-    position:relative;
+    background:#050816;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(0,255,255,.18), transparent 20%),
+      radial-gradient(circle at 85% 25%, rgba(0,119,255,.15), transparent 25%),
+      radial-gradient(circle at 50% 85%, rgba(0,255,200,.12), transparent 30%);
+    background-attachment:fixed;
+}
 }
 .skill-card, .service-card, .project-card, .about-card, .course-card{
     background:rgba(255,255,255,.07);
@@ -1224,4 +1217,41 @@ body{
     to{transform:translateY(-300px);}
 }
 
- 
+ /* PREMIUM GLOW */
+
+.hero,
+.section{
+    position:relative;
+}
+
+.hero::before,
+.section::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:#00f5ff;
+    filter:blur(120px);
+    opacity:.12;
+    border-radius:50%;
+    animation:moveGlow 8s ease-in-out infinite alternate;
+}
+
+.hero::before{
+    top:-60px;
+    left:-80px;
+}
+
+.section::before{
+    right:-80px;
+    bottom:-60px;
+}
+
+@keyframes moveGlow{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(60px,40px);
+    }
+}
