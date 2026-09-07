@@ -4,26 +4,25 @@
 
 
 // Typing Effect
-const typingText = document.getElementById("typing");
+ const typingText = document.getElementById("typing");
 
 const text = "Frontend Web Developer";
 let index = 0;
 
 function typingEffect() {
+
     if(index < text.length){
+
         typingText.innerHTML += text.charAt(index);
         index++;
+
         setTimeout(typingEffect,100);
+
     }
+
 }
 
 window.addEventListener("load", typingEffect);
-    if(typingText){
-        typingEffect();
-    }
-
-});
-
 
 
 
