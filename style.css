@@ -1743,3 +1743,16 @@ footer p {
     width:80%;
 
 }
+.skill-card,
+.service-card,
+.project-card,
+.about-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+    color: white;
+}
