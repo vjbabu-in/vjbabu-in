@@ -1,220 +1,91 @@
- 
-// =====================
-// TYPING EFFECT
-// =====================
-
-
-const text = [
-    "Frontend Web Developer",
-    "UI/UX Designer",
-    "Website Creator",
-    "Founder of VjBabu.in"
-];
-
-
-let index = 0;
-let charIndex = 0;
+/* =========================
+TYPING EFFECT
+========================= */
 
 const typing = document.getElementById("typing");
 
+const words = [
+"Frontend Developer",
+"UI / UX Designer",
+"Web Designer",
+"JavaScript Developer",
+"Founder of VjBabu.in"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
 function typeEffect(){
 
+let current = words[wordIndex];
 
-    if(charIndex < text[index].length){
+if(!deleting){
 
-        typing.innerHTML += text[index].charAt(charIndex);
+typing.textContent = current.substring(0,charIndex++);
 
-        charIndex++;
+if(charIndex > current.length){
 
-        setTimeout(typeEffect,100);
+deleting = true;
 
-    }
+setTimeout(typeEffect,1200);
 
-    else{
-
-        setTimeout(eraseEffect,1500);
-
-    }
+return;
 
 }
 
+}
 
+else{
 
-function eraseEffect(){
+typing.textContent = current.substring(0,charIndex--);
 
+if(charIndex < 0){
 
-    if(charIndex > 0){
+deleting = false;
 
-        typing.innerHTML =
-        text[index].substring(0,charIndex-1);
-
-        charIndex--;
-
-        setTimeout(eraseEffect,50);
-
-    }
-
-    else{
-
-        index++;
-
-        if(index >= text.length){
-
-            index = 0;
-
-        }
-
-
-        setTimeout(typeEffect,300);
-
-    }
+wordIndex = (wordIndex + 1) % words.length;
 
 }
 
+}
 
+setTimeout(typeEffect,deleting ? 50 : 100);
+
+}
 
 typeEffect();
 
 
 
+/* =========================
+BACK TO TOP
+========================= */
 
-
-
-// =====================
-// MOBILE MENU
-// =====================
-
-
-const menuBtn =
-document.querySelector(".menu-btn");
-
-
-const navLinks =
-document.querySelector(".nav-links");
-
-
-
-menuBtn.onclick = function(){
-
-
-    navLinks.classList.toggle("active");
-
-
-};
-
-
-
-
-
-
-// CLOSE MENU AFTER CLICK
-
-
-document.querySelectorAll(".nav-links a")
-.forEach(link=>{
-
-
-    link.onclick = ()=>{
-
-        navLinks.classList.remove("active");
-
-    }
-
-
-});
-
-
-
-
-
-
-
-
-// =====================
-// TOP BUTTON
-// =====================
-
-
-const topBtn =
-document.getElementById("topBtn");
-
-
+const topBtn = document.getElementById("topBtn");
 
 window.onscroll = function(){
 
+if(document.documentElement.scrollTop > 300){
 
-    if(document.documentElement.scrollTop > 400){
+topBtn.style.display = "block";
 
+}else{
 
-        topBtn.style.display="block";
+topBtn.style.display = "none";
 
-
-    }
-
-    else{
-
-
-        topBtn.style.display="none";
-
-
-    }
-
+}
 
 };
 
+topBtn.onclick = function(){
 
+window.scrollTo({
 
+top:0,
 
-
-topBtn.onclick=function(){
-
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-
-};
-
-
-
-
-
-
-// =====================
-// CONTACT FORM
-// =====================
-
-
-const form =
-document.querySelector("form");
-
-
-
-if(form){
-
-
-form.addEventListener("submit",
-function(e){
-
-
-    e.preventDefault();
-
-
-    alert(
-    "Thank you for contacting Vijay! I will reply soon."
-    );
-
-
-    form.reset();
-
+behavior:"smooth"
 
 });
 
-
-}
+};
