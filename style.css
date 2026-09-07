@@ -1255,3 +1255,96 @@ body{
         transform:translate(60px,40px);
     }
 }
+/* ===== PREMIUM PROJECT CARDS ===== */
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:linear-gradient(
+        45deg,
+        transparent,
+        rgba(0,245,255,.15),
+        transparent
+    );
+    transform:rotate(25deg);
+    transition:0.6s;
+}
+
+.project-card:hover::before{
+    left:100%;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:
+        0 0 20px #00f5ff,
+        0 0 40px rgba(0,245,255,.4);
+}
+
+/* ===== BUTTON GLOW ===== */
+
+.btn,
+.project-btn,
+.course-btn{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.btn::before,
+.project-btn::before,
+.course-btn::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+    transition:.6s;
+
+}
+
+.btn:hover::before,
+.project-btn:hover::before,
+.course-btn:hover::before{
+
+    left:120%;
+
+}
+
+/* ===== IMAGE HOVER ===== */
+
+.profile-box img{
+
+    transition:.5s;
+
+}
+
+.profile-box img:hover{
+
+    transform:scale(1.08) rotate(2deg);
+
+    box-shadow:
+    0 0 25px #00f5ff,
+    0 0 50px #2563eb;
+
+}
