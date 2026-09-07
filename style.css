@@ -951,7 +951,45 @@ GLOW EFFECT
 
 }
 
+body{
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+    position:relative;
+}
 
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+body::before{
+    background:
+      radial-gradient(circle at 20% 20%, rgba(0,245,255,.25), transparent 25%),
+      radial-gradient(circle at 80% 70%, rgba(37,99,235,.20), transparent 30%);
+    animation: glowMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(40px,-30px);
+    }
+}
+
+header,
+.hero,
+.section,
+footer{
+    position:relative;
+    z-index:1;
+}
 
 
 
@@ -1185,42 +1223,5 @@ body{
     from{transform:translateY(0);}
     to{transform:translateY(-300px);}
 }
-body{
-    background:#050816;
-    color:#fff;
-    overflow-x:hidden;
-    position:relative;
-}
 
-body::before,
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-}
-
-body::before{
-    background:
-      radial-gradient(circle at 20% 20%, rgba(0,245,255,.25), transparent 25%),
-      radial-gradient(circle at 80% 70%, rgba(37,99,235,.20), transparent 30%);
-    animation: glowMove 10s ease-in-out infinite alternate;
-}
-
-@keyframes glowMove{
-    from{
-        transform:translate(0,0);
-    }
-    to{
-        transform:translate(40px,-30px);
-    }
-}
-
-header,
-.hero,
-.section,
-footer{
-    position:relative;
-    z-index:1;
-}
+ 
