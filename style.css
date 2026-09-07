@@ -669,6 +669,7 @@ form textarea{
 
 }
 
+ 
 
 
 
@@ -1429,3 +1430,38 @@ CARD BORDER GLOW
     border-color:#00f5ff;
 
     }
+/* Contact Section */
+.contact {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #ccc;
+}
+
+.contact-box {
+    margin-top: 25px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+/* Footer */
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+}
