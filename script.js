@@ -10,22 +10,14 @@ const text = "Frontend Web Developer";
 let index = 0;
 
 function typingEffect() {
-
-    if (typingText && index < text.length) {
-
+    if(index < text.length){
         typingText.innerHTML += text.charAt(index);
         index++;
-
-        setTimeout(typingEffect, 100);
-
+        setTimeout(typingEffect,100);
     }
-
 }
 
-
-// Start Typing
-window.addEventListener("load", () => {
-
+window.addEventListener("load", typingEffect);
     if(typingText){
         typingEffect();
     }
