@@ -1348,3 +1348,84 @@ body{
     0 0 50px #2563eb;
 
 }
+/* =====================
+PREMIUM ANIMATED STARS
+===================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(2px 2px at 20px 30px,#ffffff,transparent),
+    radial-gradient(2px 2px at 100px 80px,#00f5ff,transparent),
+    radial-gradient(2px 2px at 250px 150px,#ffffff,transparent),
+    radial-gradient(2px 2px at 400px 250px,#38bdf8,transparent),
+    radial-gradient(2px 2px at 600px 120px,#ffffff,transparent);
+    background-size:700px 400px;
+    opacity:.35;
+    animation:starsMove 40s linear infinite;
+    pointer-events:none;
+    z-index:-1;
+}
+
+@keyframes starsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-400px);
+    }
+
+}
+
+
+
+
+
+/* =====================
+TITLE GLOW
+===================== */
+
+.title{
+
+    text-shadow:
+    0 0 10px #00f5ff,
+    0 0 20px #2563eb;
+
+}
+
+
+
+
+
+/* =====================
+CARD BORDER GLOW
+===================== */
+
+.skill-card,
+.service-card,
+.project-card,
+.course-card{
+
+    border:1px solid rgba(0,245,255,.25);
+
+}
+
+
+
+
+
+.skill-card:hover,
+.service-card:hover,
+.project-card:hover,
+.course-card:hover{
+
+    border-color:#00f5ff;
+
+    }
