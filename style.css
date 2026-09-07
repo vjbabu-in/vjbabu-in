@@ -1785,3 +1785,46 @@ footer p {
     transform:scale(1.08);
 
 }
+/* Profile Image Glow Animation */
+
+.profile-box {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.profile-box img {
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #00ffcc;
+
+    animation: glow 2s infinite alternate;
+
+}
+
+
+
+@keyframes glow {
+
+    from {
+
+        box-shadow:0 0 10px #00ffcc;
+
+    }
+
+    to {
+
+        box-shadow:0 0 35px #00ffcc;
+
+    }
+
+}
