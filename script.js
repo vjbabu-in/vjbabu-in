@@ -1,122 +1,168 @@
-/* =========================
-TYPING EFFECT
-========================= */
+// ===============================
+// VjBabu.in JavaScript
+// ===============================
 
-const typing = document.getElementById("typing");
 
-const words = [
-"Frontend Developer",
-"UI / UX Designer",
-"Web Designer",
-"JavaScript Developer",
-"Founder of VjBabu.in"
-];
+// Typing Effect
+const typingText = document.getElementById("typing");
 
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
+const text = "Frontend Web Developer";
+let index = 0;
 
-function typeEffect(){
+function typingEffect() {
 
-let current = words[wordIndex];
+    if (typingText && index < text.length) {
 
-if(!deleting){
+        typingText.innerHTML += text.charAt(index);
+        index++;
 
-typing.textContent = current.substring(0,charIndex++);
+        setTimeout(typingEffect, 100);
 
-if(charIndex > current.length){
-
-deleting = true;
-
-setTimeout(typeEffect,1200);
-
-return;
+    }
 
 }
 
-}
 
-else{
+// Start Typing
+window.addEventListener("load", () => {
 
-typing.textContent = current.substring(0,charIndex--);
+    if(typingText){
+        typingEffect();
+    }
 
-if(charIndex < 0){
-
-deleting = false;
-
-wordIndex = (wordIndex + 1) % words.length;
-
-}
-
-}
-
-setTimeout(typeEffect,deleting ? 50 : 100);
-
-}
-
-typeEffect();
+});
 
 
 
-/* =========================
-BACK TO TOP
-========================= */
+
+// Smooth Scroll Navigation
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        let target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
+
+});
+
+
+
+
+// Back To Top Button
 
 const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function(){
 
-if(document.documentElement.scrollTop > 300){
+window.addEventListener("scroll", ()=>{
 
-topBtn.style.display = "block";
+    if(topBtn){
 
-}else{
+        if(window.scrollY > 300){
 
-topBtn.style.display = "none";
+            topBtn.style.display="block";
 
-}
-
-};
-
-topBtn.onclick = function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-// Welcome Message
-window.onload = function () {
-    console.log("Welcome to Vijay Learning Hub 🚀");
-};
-
-
-// Smooth Scroll
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        if(this.hash !== "") {
-            e.preventDefault();
-
-            let section = document.querySelector(this.hash);
-            section.scrollIntoView({
-                behavior: "smooth"
-            });
         }
-    });
+
+        else{
+
+            topBtn.style.display="none";
+
+        }
+
+    }
+
 });
 
 
-// Explore Courses Button
-function exploreCourses() {
-    window.location.href = "courses.html";
+
+if(topBtn){
+
+    topBtn.addEventListener("click", ()=>{
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
 }
 
 
-// Loading Animation
-setTimeout(() => {
-    document.body.style.opacity = "1";
-}, 500);
+
+
+// Scroll Reveal Animation
+
+const cards = document.querySelectorAll(
+".skill-card, .service-card, .project-card, .about-card"
+);
+
+
+window.addEventListener("scroll", ()=>{
+
+
+cards.forEach(card=>{
+
+
+let position = card.getBoundingClientRect().top;
+
+let screenHeight = window.innerHeight;
+
+
+if(position < screenHeight - 100){
+
+    card.classList.add("show");
+
+}
+
+
+});
+
+
+});
+
+
+
+
+// Contact Form Message
+
+const form = document.querySelector("form");
+
+
+if(form){
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Thank you for contacting Vijay Babu! 🚀");
+
+    form.reset();
+
+});
+
+}
+
+
+
+
+// Console Message
+
+console.log(
+"Welcome to VjBabu.in 🚀 Designed & Developed by Vijay Babu"
+);
