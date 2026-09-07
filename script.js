@@ -4,9 +4,9 @@
 
 
 // Typing Effect
- const typingText = document.getElementById("typing");
+let typingText; = document.getElementById("typing");
 
-const text = "Frontend Web Developer";
+let text = "Frontend Web Developer";
 let index = 0;
 
 function typingEffect() {
@@ -22,7 +22,15 @@ function typingEffect() {
 
 }
 
-window.addEventListener("load", typingEffect);
+window.addEventListener("load", ()=>{
+
+    typingText = document.getElementById("typing");
+
+    if(typingText){
+        typingEffect();
+    }
+
+});
 
 
 
