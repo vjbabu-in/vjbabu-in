@@ -166,3 +166,18 @@ form.addEventListener("submit", function(e){
 console.log(
 "Welcome to VjBabu.in 🚀 Designed & Developed by Vijay Babu"
 );
+// Mobile Navbar Menu
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector(".nav-links");
+
+
+if(menuBtn){
+
+menuBtn.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
+});
+
+}
