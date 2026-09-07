@@ -1593,3 +1593,103 @@ footer p {
 
 
 }
+/* Hero Modern Effect */
+
+.hero {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.hero::before {
+
+    content:"";
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    top:50px;
+    left:-100px;
+
+    animation: float 6s infinite ease-in-out;
+
+}
+
+
+.hero::after {
+
+    content:"";
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    bottom:50px;
+    right:-80px;
+
+    animation: float 5s infinite ease-in-out;
+
+}
+
+
+
+.profile-box img {
+
+    animation: profileMove 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float {
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(30px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+
+@keyframes profileMove {
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
