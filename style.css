@@ -1828,3 +1828,19 @@ footer p {
     }
 
 }
+/* Sticky Navbar */
+
+header {
+
+    position: sticky;
+    top:0;
+    z-index:1000;
+
+}
+
+
+.navbar {
+
+    backdrop-filter: blur(10px);
+
+}
