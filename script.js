@@ -181,3 +181,26 @@ menuBtn.addEventListener("click",()=>{
 });
 
 }
+// Skills Progress Animation
+
+const progressBars = document.querySelectorAll(".progress-bar");
+
+
+window.addEventListener("scroll", ()=>{
+
+    progressBars.forEach(bar=>{
+
+        let position = bar.getBoundingClientRect().top;
+
+        let screenHeight = window.innerHeight;
+
+
+        if(position < screenHeight - 50){
+
+            bar.classList.add("animate");
+
+        }
+
+    });
+
+});
