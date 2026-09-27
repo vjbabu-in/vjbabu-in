@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Dashboard</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#0f172a;
+color:#fff;
+}
+
+header{
+background:#1e293b;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.container{
+padding:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.card h2{
+margin-bottom:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+}
+
+.btn:hover{
+background:#1d4ed8;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h2>Business Dashboard</h2>
+
+<a href="index.html" class="btn">Home</a>
+</header>
+
+<div class="container">
+
+<h1>Welcome 👋</h1>
+<p>Select a service to continue.</p>
+
+<div class="cards">
+
+<div class="card">
+<h2>🌐 Website Development</h2>
+<p>Modern responsive websites.</p>
+<a href="booking.html" class="btn">Book Now</a>
+</div>
+
+<div class="card">
+<h2>📱 App Development</h2>
+<p>Android & iOS apps.</p>
+<a href="booking.html" class="btn">Book Now</a>
+</div>
+
+<div class="card">
+<h2>🎨 UI/UX Design</h2>
+<p>Premium interface design.</p>
+<a href="booking.html" class="btn">Book Now</a>
+</div>
+
+<div class="card">
+<h2>📈 Digital Marketing</h2>
+<p>Grow your business online.</p>
+<a href="booking.html" class="btn">Book Now</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
