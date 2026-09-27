@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{
+background:#0f172a;
+padding:40px;
+color:#fff;
+}
+.invoice{
+max-width:800px;
+margin:auto;
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+}
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+th,td{
+padding:12px;
+border-bottom:1px solid #334155;
+text-align:left;
+}
+th{
+background:#2563eb;
+}
+.total{
+text-align:right;
+font-size:24px;
+margin-top:20px;
+}
+button{
+margin-top:30px;
+padding:12px 25px;
+background:#2563eb;
+border:none;
+border-radius:10px;
+color:#fff;
+cursor:pointer;
+}
+button:hover{
+background:#1d4ed8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="invoice">
+
+<h1>Invoice</h1>
+
+<p><b>Invoice No:</b> INV-2026-001</p>
+<p><b>Client:</b> John Doe</p>
+<p><b>Date:</b> 25 September 2026</p>
+
+<table>
+<tr>
+<th>Service</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>Business Website Development</td>
+<td>₹9,999</td>
+</tr>
+
+<tr>
+<td>Domain & Hosting</td>
+<td>₹2,000</td>
+</tr>
+
+<tr>
+<td>Support</td>
+<td>₹1,000</td>
+</tr>
+
+</table>
+
+<div class="total">
+Total: <b>₹12,999</b>
+</div>
+
+<button onclick="window.print()">🖨 Print Invoice</button>
+
+</div>
+
+</body>
+</html>
