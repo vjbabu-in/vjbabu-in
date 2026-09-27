@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Chat</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0f172a;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh}
+.chat{
+width:400px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+.header{
+background:#2563eb;
+padding:15px;
+text-align:center;
+font-weight:bold;
+}
+.messages{
+height:350px;
+padding:15px;
+overflow-y:auto;
+}
+.msg{
+background:#334155;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+}
+.input{
+display:flex;
+}
+.input input{
+flex:1;
+padding:15px;
+border:none;
+outline:none;
+}
+.input button{
+padding:15px 20px;
+background:#2563eb;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="chat">
+<div class="header">💬 Live Support</div>
+
+<div class="messages" id="messages">
+<div class="msg">Hello! How can we help you today?</div>
+</div>
+
+<div class="input">
+<input type="text" id="text" placeholder="Type your message...">
+<button onclick="send()">Send</button>
+</div>
+</div>
+
+<script>
+function send(){
+const input=document.getElementById("text");
+const messages=document.getElementById("messages");
+
+if(input.value.trim()!=""){
+messages.innerHTML+=`<div class="msg">${input.value}</div>`;
+messages.innerHTML+=`<div class="msg">Thank you! Our team will contact you soon.</div>`;
+input.value="";
+messages.scrollTop=messages.scrollHeight;
+}
+}
+</script>
+
+</body>
+</html>
