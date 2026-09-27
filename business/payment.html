@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:#fff;
+}
+.box{
+width:420px;
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+.price{
+font-size:40px;
+margin:20px 0;
+color:#22c55e;
+}
+input,select{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+button{
+width:100%;
+padding:14px;
+background:#2563eb;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+button:hover{
+background:#1d4ed8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Payment</h1>
+
+<p>Select your package</p>
+
+<div class="price">₹9,999</div>
+
+<select>
+<option>UPI</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+<option>Net Banking</option>
+</select>
+
+<input type="text" placeholder="Enter Payment ID">
+
+<button onclick="payNow()">Pay Now</button>
+
+</div>
+
+<script>
+function payNow(){
+alert("✅ Demo Payment Successful!");
+window.location.href="success.html";
+}
+</script>
+
+</body>
+</html>
