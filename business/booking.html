@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Service</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+width:420px;
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+h1{
+color:white;
+text-align:center;
+margin-bottom:25px;
+}
+
+input,select,textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+font-size:15px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Book Your Service</h1>
+
+<form id="bookingForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address
