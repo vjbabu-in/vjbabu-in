@@ -1,51 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VjBabu Technologies | Web Design & Development</title>
 
-<meta name="description" content="VjBabu Technologies builds modern websites for businesses, startups and personal brands.">
-
-<meta name="keywords" content="Web Developer, Website Design, Portfolio, Business Website, VjBabu">
-
-<meta name="author" content="Vijay Babu">
-
-<meta name="theme-color" content="#050816">
+<meta name="description" content="Modern websites for businesses and personal brands.">
 
 <link rel="icon" href="favicon.png">
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 
-
 <body>
-<!-- ================= NAVBAR ================= -->
+  <header>
+<nav class="navbar">
 
-<header>
-  <nav class="navbar">
+<a href="#" class="logo">
+VjBabu<span>Tech</span>
+</a>
 
-    <div class="logo">
-VjBabu<span> Technologies</span>
-    </div>
+<div class="menu-btn" id="menuBtn">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-    <div class="menu-btn" id="menuBtn">
-      <i class="fa-solid fa-bars"></i>
-    </div>
 <ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
 
 <li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
 
 <li><a href="#services">Services</a></li>
 
@@ -53,41 +43,40 @@ VjBabu<span> Technologies</span>
 
 <li><a href="#contact">Contact</a></li>
 
-<li><a href="courses.html">Learn</a></li>
-
-<li><a href="login.html">Login</a></li>
-
 </ul>
 
-  </nav>
-</header>
+</nav>
+  </header>
+  <!-- ================= HERO ================= -->
 
-<!-- ================= HERO ================= -->
 <section id="home" class="hero">
 
 <div class="hero-content">
 
 <div class="hero-left">
 
-<h5>🚀 VJBABU TECHNOLOGIES</h5>
+<span class="hero-tag">
+🚀 Welcome to VjBabu Technologies
+</span>
 
 <h1>
 Building <span>Modern Websites</span><br>
-That Grow Your Business
+For Businesses & Creators
 </h1>
 
 <p class="hero-text">
-We create premium, fast and responsive websites for businesses,
-startups and personal brands.
+Hi, I'm <strong>Vijay Babu</strong>, a Frontend Web Developer and B.Tech ECE student. I design premium, fast and responsive websites that help businesses build a strong online presence.
 </p>
 
 <div class="hero-buttons">
 
 <a href="#portfolio" class="btn">
+<i class="fa-solid fa-briefcase"></i>
 View Portfolio
 </a>
 
 <a href="#contact" class="btn outline">
+<i class="fa-solid fa-paper-plane"></i>
 Get Free Quote
 </a>
 
@@ -121,202 +110,366 @@ Get Free Quote
 
 <div class="hero-right">
 
+<div class="profile-box">
+
 <img src="IMG_20260901_151704.png" alt="Vijay Babu">
 
 </div>
 
 </div>
 
-</section>
+</div>
 
-<!-- ================= ABOUT ================= -->
+</section>
+  <!-- ================= ABOUT ================= -->
 
 <section id="about" class="section">
 
-<h2 class="title">
-About Me
-</h2>
+<h2 class="title">About Me</h2>
+
+<div class="about-container">
 
 <div class="about-card">
 
+<h3>Hello, I'm Vijay Babu 👋</h3>
+
 <p>
-Hi, I'm <strong>Vijay Babu</strong>, a Frontend Web Developer and B.Tech ECE student from Andhra Pradesh. I build modern, responsive, and high-performance websites for businesses, startups, and personal brands. My goal is to create websites that are visually appealing, fast, and user-friendly.
+I'm a passionate <strong>Frontend Web Developer</strong> and a B.Tech ECE student from Andhra Pradesh. I enjoy creating modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.
 </p>
 
+<p>
+My goal is to help businesses, startups, and personal brands build a strong online presence with fast, attractive, and professional websites.
+</p>
+
+<div class="about-info">
+
+<div class="info-box">
+<h4>Experience</h4>
+<p>Frontend Projects</p>
 </div>
- 
+
+<div class="info-box">
+<h4>Specialization</h4>
+<p>Responsive Web Design</p>
+</div>
+
+<div class="info-box">
+<h4>Location</h4>
+<p>Andhra Pradesh, India</p>
+</div>
+
+<div class="info-box">
+<h4>Availability</h4>
+<p>Open for Freelance</p>
+</div>
+
+</div>
+
+<a href="#contact" class="btn">
+Hire Me
+</a>
+
+</div>
 
 </div>
 
 </section>
-  <div class="card" id="skills">
-
-<div></div>
-<!-- ================= SKILLS ================= -->
+  <!-- ================= SKILLS ================= -->
 
 <section id="skills" class="section">
 
 <h2 class="title">My Skills</h2>
 
+<p class="section-subtitle">
+Technologies I use to build modern, fast and responsive websites.
+</p>
+
 <div class="skills-container">
 
 <div class="skill-card">
-<h3><i class="fa-brands fa-html5"></i> HTML5</h3>
+<i class="fa-brands fa-html5 skill-icon"></i>
+<h3>HTML5</h3>
 <div class="progress">
-<div class="progress-bar html"><span>95%</span></div>
+<div class="progress-bar html"></div>
 </div>
+<span>95%</span>
 </div>
 
 <div class="skill-card">
-<h3><i class="fa-brands fa-css3-alt"></i> CSS3</h3>
+<i class="fa-brands fa-css3-alt skill-icon"></i>
+<h3>CSS3</h3>
 <div class="progress">
-<div class="progress-bar css"><span>90%</span></div>
+<div class="progress-bar css"></div>
 </div>
+<span>90%</span>
 </div>
 
 <div class="skill-card">
-<h3><i class="fa-brands fa-js"></i> JavaScript</h3>
+<i class="fa-brands fa-js skill-icon"></i>
+<h3>JavaScript</h3>
 <div class="progress">
-<div class="progress-bar js"><span>80%</span></div>
+<div class="progress-bar js"></div>
 </div>
+<span>80%</span>
 </div>
 
 <div class="skill-card">
-<h3><i class="fa-brands fa-python"></i> Python</h3>
+<i class="fa-brands fa-python skill-icon"></i>
+<h3>Python</h3>
 <div class="progress">
-<div class="progress-bar python"><span>70%</span></div>
+<div class="progress-bar python"></div>
 </div>
+<span>70%</span>
 </div>
 
 <div class="skill-card">
-<h3><i class="fa-solid fa-code"></i> C / C++</h3>
+<i class="fa-solid fa-code skill-icon"></i>
+<h3>C / C++</h3>
 <div class="progress">
-<div class="progress-bar cpp"><span>75%</span></div>
+<div class="progress-bar cpp"></div>
 </div>
+<span>75%</span>
 </div>
 
 <div class="skill-card">
-<h3><i class="fa-solid fa-palette"></i> UI / UX</h3>
+<i class="fa-solid fa-palette skill-icon"></i>
+<h3>UI / UX Design</h3>
 <div class="progress">
-<div class="progress-bar uiux"><span>80%</span></div>
+<div class="progress-bar uiux"></div>
 </div>
+<span>80%</span>
 </div>
 
 </div>
 
 </section>
-<div class="card" id="projects">
-
- 
-
-</div>
-<!-- ================= SERVICES ================= -->
+  <!-- ================= SERVICES ================= -->
 
 <section id="services" class="section">
 
 <h2 class="title">Our Services</h2>
 
+<p class="section-subtitle">
+We build premium websites that are fast, modern and responsive.
+</p>
+
 <div class="services-container">
 
 <div class="service-card">
 <i class="fa-solid fa-laptop-code"></i>
-<h3>Business Websites</h3>
-<p>Professional websites for companies and startups.</p>
+<h3>Business Website</h3>
+<p>
+Professional websites for companies, startups and local businesses with a modern design.
+</p>
 </div>
 
 <div class="service-card">
-<i class="fa-solid fa-user"></i>
-<h3>Portfolio Websites</h3>
-<p>Personal branding websites for students and professionals.</p>
+<i class="fa-solid fa-user-tie"></i>
+<h3>Portfolio Website</h3>
+<p>
+Personal portfolio websites for students, freelancers and professionals.
+</p>
 </div>
 
 <div class="service-card">
 <i class="fa-solid fa-cart-shopping"></i>
 <h3>E-Commerce</h3>
-<p>Modern online stores with responsive layouts.</p>
+<p>
+Modern online shopping websites with attractive product pages and responsive layouts.
+</p>
 </div>
 
 <div class="service-card">
-<i class="fa-solid fa-mobile-screen"></i>
+<i class="fa-solid fa-mobile-screen-button"></i>
 <h3>Responsive Design</h3>
-<p>Optimized for mobile, tablet and desktop.</p>
+<p>
+Every website works perfectly on mobile, tablet and desktop devices.
+</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Website Speed</h3>
+<p>
+Optimized code for faster loading, better SEO and improved user experience.
+</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-headset"></i>
+<h3>Support</h3>
+<p>
+Continuous support, maintenance and updates after website delivery.
+</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- ================= PROJECTS ================= -->
+  <!-- ================= PORTFOLIO ================= -->
 
 <section id="portfolio" class="section">
-<h2 class="title">My Projects</h2>
+
+<h2 class="title">Featured Projects</h2>
+
+<p class="section-subtitle">
+Some of my recent web design and development projects.
+</p>
 
 <div class="projects-container">
 
-<div class="project-card">
-<h3>🌐 VjBabu.in</h3>
-<p>My personal developer portfolio website.</p>
-<a href="index.html" class="project-btn">View Project</a>
-</div>
+<!-- Project 1 -->
 
 <div class="project-card">
-<h3>📚 Learn With Vijay</h3>
-<p>Online learning platform with courses, quizzes and notes.</p>
-<a href="courses.html" class="project-btn">Open Website</a>
+
+<div class="project-icon">
+<i class="fa-solid fa-globe"></i>
 </div>
 
-<div class="project-card">
-<h3>🛍 Business Website</h3>
-<p>Responsive business website template.</p>
-<a href="#" class="project-btn">Live Demo</a>
+<h3>VjBabu.in</h3>
+
+<p>
+My personal portfolio website showcasing my skills, services and projects with a modern responsive design.
+</p>
+
+<div class="tech">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
 </div>
 
-<div class="project-card">
-<h3>🍽 Restaurant Website</h3>
-<p>Modern restaurant landing page.</p>
-<a href="#" class="project-btn">Live Demo</a>
-</div>
-
-</div>
-<footer class="footer">
-
-<h2>VjBabu.in</h2>
-
-<p>Frontend Web Developer | B.Tech ECE Student</p>
-
-<p>Building Modern & Responsive Websites.</p>
-
-<div class="social-links">
-
-<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
-Instagram
-</a>
-
-|
-
-<a href="mailto:vijaykumarjonnakuti0@gmail.com">
-Email
-</a>
-
-|
-
-<a href="https://wa.me/919032219791" target="_blank">
-WhatsApp
+<a href="index.html" class="project-btn">
+View Project
 </a>
 
 </div>
 
-<p>© 2026 VjBabu.in. All Rights Reserved.</p>
+<!-- Project 2 -->
 
-</footer>
+<div class="project-card">
+
+<div class="project-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h3>Learn With Vijay</h3>
+
+<p>
+Online learning platform with courses, notes, quizzes and certificates.
+</p>
+
+<div class="tech">
+<span>HTML</span>
+<span>CSS</span>
+<span>JS</span>
+</div>
+
+<a href="courses.html" class="project-btn">
+Open Website
+</a>
+
+</div>
+
+<!-- Project 3 -->
+
+<div class="project-card">
+
+<div class="project-icon">
+<i class="fa-solid fa-store"></i>
+</div>
+
+<h3>Business Website</h3>
+
+<p>
+Modern company website with premium landing page, services and contact sections.
+</p>
+
+<div class="tech">
+<span>Responsive</span>
+<span>SEO</span>
+<span>Fast</span>
+</div>
+
+<a href="#" class="project-btn">
+Live Demo
+</a>
+
+</div>
+
+<!-- Project 4 -->
+
+<div class="project-card">
+
+<div class="project-icon">
+<i class="fa-solid fa-utensils"></i>
+</div>
+
+<h3>Restaurant Website</h3>
+
+<p>
+Premium restaurant website with menu, gallery, table booking and contact page.
+</p>
+
+<div class="tech">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+
+<a href="restaurant/index.html" class="project-btn">
+Live Demo
+</a>
+
+</div>
+
+</div>
+
 </section>
-<!-- ================= CONTACT ================= -->
+  <!-- ================= CONTACT ================= -->
 
 <section id="contact" class="section">
 
-<h2 class="title">Contact Me</h2>
+<h2 class="title">Let's Work Together</h2>
+
+<p class="section-subtitle">
+Have a project in mind? Feel free to contact me anytime.
+</p>
 
 <div class="contact-box">
+
+<div class="contact-info">
+
+<h3>Contact Information</h3>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+<a href="mailto:vijaykumarjonnakuti0@gmail.com">
+vijaykumarjonnakuti0@gmail.com
+</a>
+</p>
+
+<p>
+<i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/919032219791" target="_blank">
++91 90322 19791
+</a>
+</p>
+
+<p>
+<i class="fa-brands fa-instagram"></i>
+<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
+@vij_ay_the_ro_y_al
+</a>
+</p>
+
+<p>
+<i class="fa-brands fa-github"></i>
+<a href="https://github.com/vjbabu-in" target="_blank">
+github.com/vjbabu-in
+</a>
+</p>
+
+</div>
 
 <form>
 
@@ -324,35 +477,13 @@ WhatsApp
 
 <input type="email" placeholder="Your Email" required>
 
-<textarea rows="5" placeholder="Your Message" required></textarea>
+<textarea rows="6" placeholder="Your Message" required></textarea>
 
-<button class="btn" type="submit">
+<button type="submit" class="btn">
 Send Message
 </button>
 
 </form>
-
-<div class="social-links">
-
-<h3>Connect With Me</h3>
-
-<a href="mailto:vijaykumarjonnakuti0@gmail.com">
-📧 Email
-</a>
-
-<a href="https://wa.me/919032219791" target="_blank">
-💬 WhatsApp
-</a>
-
-<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
-📷 Instagram
-</a>
-
-<a href="https://github.com/vjbabu-in" target="_blank">
-💻 GitHub
-</a>
-
-</div>
 
 </div>
 
@@ -362,24 +493,51 @@ Send Message
 
 <footer class="footer">
 
-<h2>VjBabu.in</h2>
+<h2>VjBabu Technologies</h2>
 
-<p>Frontend Web Developer • B.Tech ECE Student</p>
+<p>
+Frontend Web Developer • B.Tech ECE Student
+</p>
 
-<p>Learn • Build • Grow</p>
+<p>
+Building Modern, Fast & Responsive Websites.
+</p>
 
-<p>© 2026 VjBabu.in. All Rights Reserved.</p>
+<div class="footer-social">
 
-<p>Designed & Developed by Vijay Babu ❤️</p>
+<a href="https://instagram.com/vij_ay_the_ro_y_al" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://github.com/vjbabu-in" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="mailto:vijaykumarjonnakuti0@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/919032219791" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+<p>
+© 2026 VjBabu Technologies. All Rights Reserved.
+</p>
+
+<p>
+Designed & Developed by <strong>Vijay Babu ❤️</strong>
+</p>
 
 </footer>
 
-<button id="topBtn">⬆</button>
+<button id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <script src="script.js"></script>
-<section class="card" id="projects">
 
-
-</section>
 </body>
 </html>
