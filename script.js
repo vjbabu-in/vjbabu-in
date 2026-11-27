@@ -262,3 +262,54 @@ cursorGlow.style.top=e.clientY+"px";
 }
 
 });
+// ===============================
+// Achievement Counter Animation
+// ===============================
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+const target=+counter.dataset.target;
+let count=0;
+
+const speed=Math.max(1,Math.ceil(target/50));
+
+const update=()=>{
+
+count+=speed;
+
+if(count>=target){
+
+counter.textContent=target;
+if(target===100){
+counter.textContent="100%";
+}
+if(target===24){
+counter.textContent="24/7";
+}
+
+}else{
+
+counter.textContent=count;
+requestAnimationFrame(update);
+
+}
+
+};
+
+update();
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>counterObserver.observe(counter));
