@@ -1049,3 +1049,58 @@ transform:rotate(360deg);
 }
 
 }
+/* ===========================
+THEME TOGGLE
+=========================== */
+
+.theme-btn{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+color:#00f5ff;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+margin-left:15px;
+}
+
+.theme-btn:hover{
+transform:rotate(180deg);
+box-shadow:0 0 20px rgba(0,245,255,.5);
+}
+
+/* Light Theme */
+
+body.light{
+background:#f4f8ff;
+color:#111827;
+}
+
+body.light .navbar{
+background:rgba(255,255,255,.9);
+}
+
+body.light .about-card,
+body.light .service-card,
+body.light .skill-card,
+body.light .project-card,
+body.light .pricing-card,
+body.light .contact-info,
+body.light form,
+body.light .faq-item{
+background:#ffffff;
+color:#111827;
+border:1px solid #dbeafe;
+}
+
+body.light .footer{
+background:#eaf2ff;
+color:#111827;
+}
+
+body.light p,
+body.light a{
+color:#334155;
+}
