@@ -107,3 +107,21 @@ behavior:"smooth"
 });
 
 console.log("Learn With Vijay Loaded Successfully 🚀");
+/* Scroll Reveal */
+
+.course-card,
+section h2,
+section p{
+
+opacity:0;
+transform:translateY(40px);
+transition:.7s ease;
+
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
