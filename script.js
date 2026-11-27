@@ -347,3 +347,20 @@ cursorOutline.style.height="35px";
 });
 
 });
+// Newsletter
+
+const newsletter=document.querySelector(".newsletter-form");
+
+if(newsletter){
+
+newsletter.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert("🎉 Thank you for subscribing!");
+
+newsletter.reset();
+
+});
+
+}
