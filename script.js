@@ -1,40 +1,178 @@
+// ===============================
+// VjBabu Technologies
+// Premium JavaScript
+// ===============================
+
 // Mobile Menu
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+if(menuBtn){
+menuBtn.addEventListener("click",()=>{
+navLinks.classList.toggle("active");
+});
+}
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener("click",function(e){
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+e.preventDefault();
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+navLinks.classList.remove("active");
+
+}
+
+});
+});
+
+// Navbar Blur
+const navbar=document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>50){
+
+navbar.style.background="rgba(5,8,22,.92)";
+navbar.style.boxShadow="0 8px 30px rgba(0,245,255,.2)";
+
+}else{
+
+navbar.style.background="rgba(5,8,22,.75)";
+navbar.style.boxShadow="none";
+
+}
+
 });
 
 // Scroll Reveal
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.15
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
 });
 
-document.querySelectorAll(".skill-card, .service-card, .project-card, .about-card").forEach(el => {
-    observer.observe(el);
+},{
+threshold:.15
+});
+
+document.querySelectorAll(
+".about-card,.info-box,.skill-card,.service-card,.project-card,.contact-info,form"
+).forEach(el=>{
+observer.observe(el);
+});
+
+// Progress Bars
+const progressBars=document.querySelectorAll(".progress-bar");
+
+const progressObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.width=
+entry.target.classList.contains("html")?"95%":
+entry.target.classList.contains("css")?"90%":
+entry.target.classList.contains("js")?"80%":
+entry.target.classList.contains("python")?"70%":
+entry.target.classList.contains("cpp")?"75%":"80%";
+
+}
+
+});
+
+});
+
+progressBars.forEach(bar=>progressObserver.observe(bar));
+
+// Counter Animation
+const stats=document.querySelectorAll(".stat h2");
+
+stats.forEach(stat=>{
+
+const finalValue=parseInt(stat.innerText);
+
+let count=0;
+
+const timer=setInterval(()=>{
+
+count++;
+
+stat.innerText=count+"+";
+
+if(count>=finalValue){
+
+clearInterval(timer);
+
+if(finalValue===100){
+stat.innerText="100%";
+}
+
+if(finalValue===24){
+stat.innerText="24/7";
+}
+
+}
+
+},40);
+
 });
 
 // Back To Top
-const topBtn = document.getElementById("topBtn");
+const topBtn=document.getElementById("topBtn");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="flex";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
 });
 
-topBtn.onclick = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+// Contact Form
+const form=document.querySelector("form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert("✅ Thank you for contacting VjBabu Technologies!");
+
+form.reset();
+
+});
+
+}
+
+console.log("VjBabu Technologies Loaded Successfully 🚀");
