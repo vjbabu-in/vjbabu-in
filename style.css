@@ -860,3 +860,25 @@ padding:80px 20px;
 }
 
 }
+.testimonial-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #00f5ff;
+margin-bottom:20px;
+box-shadow:0 0 20px rgba(0,245,255,.4);
+}
+
+.service-card h4{
+color:#00f5ff;
+margin-bottom:15px;
+font-weight:500;
+}
+
+.stars{
+margin-top:20px;
+font-size:20px;
+color:#FFD700;
+letter-spacing:3px;
+}
