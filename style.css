@@ -1520,3 +1520,30 @@ color:#00f5ff;
 color:#cbd5e1;
 line-height:1.8;
 }
+/* ===========================
+FINAL CTA
+=========================== */
+
+.cta-box{
+max-width:1000px;
+margin:auto;
+padding:70px 40px;
+text-align:center;
+border-radius:30px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+border:1px solid rgba(0,245,255,.2);
+box-shadow:0 0 40px rgba(0,245,255,.2);
+}
+
+.cta-box h2{
+font-size:42px;
+margin-bottom:20px;
+color:#fff;
+}
+
+.cta-box p{
+max-width:700px;
+margin:0 auto 35px;
+line-height:1.8;
+color:#cbd5e1;
+}
