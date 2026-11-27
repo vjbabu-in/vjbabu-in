@@ -1583,3 +1583,37 @@ outline:none;
 .newsletter-form input::placeholder{
 color:#94a3b8;
 }
+/* ===========================
+TECHNOLOGIES
+=========================== */
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.tech-card{
+padding:35px 20px;
+text-align:center;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(0,245,255,.15);
+border-radius:20px;
+transition:.35s;
+}
+
+.tech-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,245,255,.25);
+}
+
+.tech-card i{
+font-size:48px;
+color:#00f5ff;
+margin-bottom:20px;
+}
+
+.tech-card h3{
+font-size:20px;
+}
