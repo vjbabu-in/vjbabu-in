@@ -163,3 +163,17 @@ display:none;
 }
 
 }
+/* Reveal Animation */
+
+.card,
+section h2,
+section p{
+opacity:0;
+transform:translateY(40px);
+transition:.7s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
