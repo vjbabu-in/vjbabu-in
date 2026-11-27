@@ -1422,3 +1422,18 @@ rgba(5,8,22,.88)
 );
 z-index:-1;
 }
+/* ===========================
+CTA BUTTONS
+=========================== */
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.cta-buttons .btn{
+min-width:220px;
+}
