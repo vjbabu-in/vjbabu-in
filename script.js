@@ -246,3 +246,19 @@ const progress=(scrollTop/scrollHeight)*100;
 progressBar.style.width=progress+"%";
 
 });
+// ===============================
+// Mouse Glow Effect
+// ===============================
+
+const cursorGlow=document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove",(e)=>{
+
+if(cursorGlow){
+
+cursorGlow.style.left=e.clientX+"px";
+cursorGlow.style.top=e.clientY+"px";
+
+}
+
+});
