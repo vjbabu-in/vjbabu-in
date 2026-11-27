@@ -1,105 +1,144 @@
+/* ===================================
+   LOGIN PAGE
+   VjBabu Technologies
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
 body{
-  margin:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  background:#ffb27d;
-  overflow:hidden;
-  font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:linear-gradient(135deg,#050816,#0f172a,#1e293b);
+overflow:hidden;
 }
 
-.container{
-  position:relative;
-  width:700px;
-  height:400px;
-  border:3px solid #fff;
+.login-container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
-.man{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  width:80px;
-  animation:walk 4s linear forwards;
+.login-card{
+width:100%;
+max-width:420px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:24px;
+padding:40px 30px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
-.box{
-  position:absolute;
-  bottom:20px;
-  right:150px;
-  width:60px;
+.logo{
+text-align:center;
+margin-bottom:30px;
 }
 
-.login{
-  position:absolute;
-  right:20px;
-  top:50%;
-  transform:translateY(-50%);
-  width:250px;
-  padding:20px;
-  background:#fff;
-  border-radius:10px;
-  display:none;
+.logo h1{
+font-size:34px;
+color:#fff;
 }
 
-.login input{
-  width:100%;
-  margin:10px 0;
-  padding:10px;
+.logo span{
+color:#00f5ff;
 }
 
-.login button{
-  width:100%;
-  padding:10px;
-  background:#2196f3;
-  color:white;
-  border:none;
+.logo p{
+margin-top:10px;
+color:#cbd5e1;
 }
 
-@keyframes walk{
-  from{left:20px;}
-  to{left:420px;}
-}
-setTimeout(function () {
-    document.getElementById("login").style.display = "block";
-}, 4000);
-
-function login() {
-    alert("Login Successful!");
-    window.location.href = "dashboard.html";
-}
-.man{
-    position:absolute;
-    bottom:20px;
-    left:20px;
-    width:80px;
-    animation:walk 4s linear forwards,
-              bounce 0.5s infinite;
+.input-box{
+display:flex;
+align-items:center;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
+border-radius:14px;
+padding:0 15px;
+margin-bottom:20px;
 }
 
-@keyframes walk{
-    0%{left:20px;}
-    100%{left:420px;}
+.input-box i{
+color:#00f5ff;
+font-size:18px;
+margin-right:12px;
 }
 
-@keyframes bounce{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-6px);
-    }
+.input-box input{
+width:100%;
+padding:16px 0;
+border:none;
+outline:none;
+background:transparent;
+color:#fff;
+font-size:16px;
 }
 
-.login{
-    opacity:0;
-    transform:scale(0.8);
-    transition:0.5s;
+.input-box input::placeholder{
+color:#94a3b8;
 }
 
-.login.show{
-    display:block;
-    opacity:1;
-    transform:scale(1);
+.options{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+margin-bottom:25px;
+color:#cbd5e1;
+}
+
+.options a{
+color:#00f5ff;
+text-decoration:none;
+}
+
+.login-btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+background:#00f5ff;
+color:#050816;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.login-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(0,245,255,.4);
+}
+
+.register-text{
+text-align:center;
+margin-top:25px;
+color:#cbd5e1;
+}
+
+.register-text a{
+color:#00f5ff;
+text-decoration:none;
+font-weight:600;
+}
+
+@media(max-width:480px){
+
+.login-card{
+padding:30px 20px;
+}
+
+.logo h1{
+font-size:28px;
+}
+
 }
