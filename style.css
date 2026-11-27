@@ -1347,3 +1347,18 @@ justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 }
+/* ===========================
+GOOGLE MAP
+=========================== */
+
+.map-box{
+overflow:hidden;
+border-radius:25px;
+border:1px solid rgba(0,245,255,.2);
+box-shadow:0 0 30px rgba(0,245,255,.15);
+}
+
+.map-box iframe{
+display:block;
+width:100%;
+}
