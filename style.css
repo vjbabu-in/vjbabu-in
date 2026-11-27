@@ -1103,4 +1103,20 @@ color:#111827;
 body.light p,
 body.light a{
 color:#334155;
+   
+}
+/* ===========================
+SCROLL PROGRESS BAR
+=========================== */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+width:0%;
+height:4px;
+background:linear-gradient(90deg,#00f5ff,#2563eb,#7c3aed);
+z-index:99999;
+box-shadow:0 0 15px #00f5ff;
+transition:width .15s linear;
 }
