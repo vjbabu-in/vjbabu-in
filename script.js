@@ -189,3 +189,18 @@ item.classList.toggle("active");
 });
 
 });
+// ===============================
+// Loading Screen
+// ===============================
+
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+setTimeout(()=>{
+
+loader.classList.add("hide");
+
+},1200);
+
+});
