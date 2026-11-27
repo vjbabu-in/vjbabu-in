@@ -1547,3 +1547,39 @@ margin:0 auto 35px;
 line-height:1.8;
 color:#cbd5e1;
 }
+/* ===========================
+NEWSLETTER
+=========================== */
+
+.newsletter-box{
+max-width:850px;
+margin:auto;
+text-align:center;
+padding:60px 30px;
+background:rgba(255,255,255,.05);
+border-radius:25px;
+border:1px solid rgba(0,245,255,.15);
+}
+
+.newsletter-form{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.newsletter-form input{
+width:350px;
+max-width:100%;
+padding:15px 20px;
+border-radius:12px;
+border:1px solid rgba(0,245,255,.2);
+background:rgba(255,255,255,.05);
+color:#fff;
+outline:none;
+}
+
+.newsletter-form input::placeholder{
+color:#94a3b8;
+}
